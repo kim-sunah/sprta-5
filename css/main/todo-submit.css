@@ -1,0 +1,58 @@
+.main-box__todo {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+#main-box__submit {
+  width: 45%;
+  height: 100%;
+  padding-left: 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+#main-box__submit h1,
+#main-box__submit h3 {
+  font-weight: 900;
+  text-shadow: var(--text-shadow);
+}
+
+#main-box__submit h1 {
+  font-size: 5vmax;
+  margin-top: 7vmin;
+}
+
+#main-box__submit h3 {
+  font-size: 3.3vmin;
+  margin-top: 2vmin;
+}
+
+#main-box__submit input {
+  margin-top: 12vmin;
+  width: 100%;
+  font-size: 1.6vmax;
+  background-color: unset;
+  border: unset;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+  font-weight: 500;
+}
+
+#main-box__submit input:focus {
+  outline: none;
+}
+
+.main-box__todolist {
+  width: 28vmax;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  padding: 2vmin 2vmax;
+  box-sizing: border-box;
+}
+
+.main-box__todolist img {
+  width: 15vmax;
+  height: 13vmin;
+  margin-top: 25vmin;
+}
