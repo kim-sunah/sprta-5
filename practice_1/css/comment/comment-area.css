@@ -1,0 +1,51 @@
+
+.comment-box{
+  width: 80%; 
+  margin: 0 auto;;
+  
+}
+#comment_input {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    justify-content: right;
+  }
+  
+  #comment_input h2 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 50px;
+    /* text-shadow: var(--text-shadow); */
+    margin: 4vh 4vh;
+  }
+  
+  #comment_input input {
+    height: 50px;
+    width: 500px;
+    font-size: 25px;
+    background-color: unset;
+    border: unset;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+    /* text-align: center; */
+    font-weight: 500;
+    margin-left: 4vh;
+  }
+  
+  #comment_input input:focus {
+    outline: none;
+  }
+  .reset{
+    margin-right: 7rem;
+
+  }
+  .btn{
+    margin: auto; margin-top: 5rem;
+  }
+  .form-control{
+    overflow: visible;
+
+  }
+
