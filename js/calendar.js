@@ -105,18 +105,18 @@ const init = {
       savedData = JSON.parse(savedData);
     }
 
-    const thisDday= savedData.filter(d => { 
-      const event = new Date(d.dayDate);
-      if (event.getFullYear() === thisYear && event.getMonth() === thisMonth){
-        return true;
-      } else {
-        return false;
-      }
-    })
+    // const thisDday= savedData.filter(d => { 
+    //   const event = new Date(d.dayDate);
+    //   if (event.getFullYear() === thisYear && event.getMonth() === thisMonth){
+    //     return true;
+    //   } else {
+    //     return false;
+    //   }
+    // })
 
-    if (thisDday.length !== 0) {
-      init.paintDday(thisDday);
-    }
+    // if (thisDday.length !== 0) {
+    //   init.paintDday(thisDday);
+    // }
   },
   paintDday : function(thisDday) {
     thisDday.map(d => {

@@ -21,7 +21,7 @@
     </div>
   </header>
 
-  <main>
+  <main id = "main">
     <div class="main-col">
       <div class="reset">
         <div class="reset__col">
@@ -38,9 +38,10 @@
         </form>
         <div class="main-box__todo">
           <form id="main-box__submit">
-            <h1></h1>
-            <h3>Please write a To-Do List</h3>
-            <input type="text" placeholder="Write a To-Do and Press enter" />
+            <div class = "button">
+              <button class="custom-btn btn-6"><span>Team Info</span></button>
+              <button class="custom-btn btn-6"><span>Member info</span></button>
+            </div>
           </form>
           <!-- <div class="main-box__todolist">
             <img src="img/todo-init.png" class="display-none" />
@@ -62,10 +63,11 @@
         </div>
       </div>
       <div class="bottom-box">
-        <form id="comment-submit">
-          
-        </form>
+        <div id="comment">
+        </div>
+        <button onclick="location.href='commentNew.html'">생성</button>
       </div>
+    </div>
     </div>
     <div class="main-col">
       <div class="side-box">
@@ -120,7 +122,6 @@
   </main>
 
   <script src="https://kit.fontawesome.com/7e7b57fe59.js" crossorigin="anonymous"></script>
-  <script src="config.js"></script>
   <script src="js/background.js"></script>
   <script src="js/user-name.js"></script>
   <script src="js/calendar.js"></script>
@@ -128,6 +129,8 @@
   <script src="js/clock-weather.js"></script>
   <script src="js/quotes.js"></script>
   <script src="js/todo-list.js"></script>
+  <script src="js/commentList.js" type="module"></script>
+  <!-- <script src="js/commentEdit.js" type="module"></script> -->
 </body>
 
 </html>
