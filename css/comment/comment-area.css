@@ -1,9 +1,4 @@
 
-.comment-box{
-  width: 80%; 
-  margin: 0 auto;;
-  
-}
 #comment_input {
     height: 100%;
     width: 100%;
@@ -36,16 +31,5 @@
   
   #comment_input input:focus {
     outline: none;
-  }
-  .reset{
-    margin-right: 7rem;
-
-  }
-  .btn{
-    margin: auto; margin-top: 5rem;
-  }
-  .form-control{
-    overflow: visible;
-
   }
 

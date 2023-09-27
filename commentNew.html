@@ -26,11 +26,11 @@
 
     <main>
         <div class="main-col">
-            <div class="reset" >
-                <div class="reset__col" >
+            <div class="reset">
+                <div class="reset__col">
                     <span>Wanna reset?</span>
                 </div>
-                <div class="reset__col" >
+                <div class="reset__col">
                     <span><i class="fa-solid fa-arrow-rotate-right"></i></span>
                 </div>
             </div>
@@ -39,21 +39,14 @@
                     <h2>[게시판] 칭찬해주세요</h2>
                     <div>
                         <label for="floatingInput">제목</label>
-                        
-                        <input id="commentTitle" type="text" placeholder="제목을 입력해주세요" ></input>
+                        <input id="commentTitle" type="text" placeholder="제목을 입력해주세요"></input>
                     </div>
-                    <div class="form-floating mb-3"  >
-                        <label for="floatingInput" >추천 이유</label>
-                        
-                       
-                        
-                        
-                        <textarea class="form-control"  onkeydown="resize(this)" onkeyup="resize(this)" id="comment" placeholder="추천 이유" cols="200px" ></textarea>
-                        
+                    <div class="form-floating mb-3">
+                        <label for="floatingInput">추천 이유</label>
+                        <textarea class="form-control" id="comment" placeholder="추천 이유"></textarea>
                     </div>
-                    <button id="postingbtn" type="button" class="btn btn-danger">기록하기</button>
                 </form>
-                
+                <button id="postingbtn" type="button" class="btn btn-danger">기록하기</button>
             </div>
         </div>
 
@@ -63,7 +56,6 @@
     <script src="https://kit.fontawesome.com/7e7b57fe59.js" crossorigin="anonymous"></script>
     <script src="js/background.js"></script>
     <script src="js/commentNew.js" type="module"></script>
-    <script src="js/resize.js"></script>
 </body>
 
 </html>
