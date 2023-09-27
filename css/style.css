@@ -24,6 +24,9 @@
 @import './bottom/clock-weather.css';
 @import './bottom/quotes.css';
 
+/* comment */
+@import './comment/comment-area.css';
+
 body {
   font-family: 'PT Sans', sans-serif;
   padding: 0 10vw;

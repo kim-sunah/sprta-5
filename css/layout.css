@@ -6,7 +6,8 @@ main {
 
 .main-box,
 .side-box,
-.bottom-box {
+.bottom-box,
+.comment-box {
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 70px;
   box-shadow: var(--btn-shadow);
@@ -16,6 +17,12 @@ main {
   width: 55vw;
   height: 46vh;
   margin-bottom: 4vh;
+}
+
+.comment-box{
+  width: 80vw;
+  height: 80vh;
+  margin-bottom: auto;
 }
 
 .side-box {
@@ -29,6 +36,7 @@ main {
   height: 31vh;
   padding: 3vh 2vw;
   box-sizing: border-box;
+  overflow: auto;
 }
 
 .main-col {
