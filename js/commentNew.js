@@ -40,6 +40,6 @@ $("#postingbtn").click(async function () {
 
     console.log(doc);
     await addDoc(collection(db, "comment"), doc);
-    // alert('저장 완료!');
-    // location.href='index.html';
+    alert('저장 완료!');
+    location.href='index.html';
 })
