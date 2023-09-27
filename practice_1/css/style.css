@@ -1,0 +1,47 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Open+Sans:wght@300;400;500;600;700;800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Nunito:wght@600;700;800&family=Open+Sans:wght@300;400;500;600;700;800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Black+Han+Sans&family=Nunito:wght@600;700;800&family=Open+Sans:wght@300;400;500;600;700;800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* reset */
+@import 'reset.css';
+@import 'variables.css';
+
+/* css */
+@import 'header.css';
+@import 'layout.css';
+
+/* main-box */
+@import './main/todo-list.css';
+@import './main/user-name.css';
+@import './main/todo-submit.css';
+@import "./main/button.css";
+
+/* side-box */
+@import './side/calendar.css';
+@import './side/d-day.css';
+
+/* bottom-box */
+@import './bottom/clock-weather.css';
+@import './bottom/quotes.css';
+
+/* comment */
+@import './comment/comment-area.css';
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  padding: 0 10vw;
+}
+
+.background-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -100;
+}
+
+.display-none {
+  display: none !important;
+}
