@@ -1,4 +1,7 @@
-.button {
+.card-img-top{
+  height: 200px;
+}
+/* .button {
     display: flex;
     justify-content: space-between;
     width: 80%;
@@ -85,4 +88,4 @@
  .btn-6 span:hover:after {
    width: 100%;
  } 
- 
+  */

@@ -24,6 +24,7 @@
 /* bottom-box */
 @import './bottom/clock-weather.css';
 @import './bottom/quotes.css';
+@import "./bottom/Guest.css";
 
 /* comment */
 @import './comment/comment-area.css';
