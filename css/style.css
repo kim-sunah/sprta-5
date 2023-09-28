@@ -15,6 +15,7 @@
 @import './main/todo-list.css';
 @import './main/user-name.css';
 @import './main/todo-submit.css';
+@import "./main/button.css";
 
 /* side-box */
 @import './side/calendar.css';
