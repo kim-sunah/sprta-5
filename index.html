@@ -1,171 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo-Todo</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <img class="background-img" />
-    <header>
-      <div class="chg-theme">
-        <div class="chg-theme__col">
-          <span>Change Theme</span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo-Todo</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <img class="background-img" />
+  <header>
+    <div class="chg-theme">
+      <div class="chg-theme__col">
+        <span>Change Theme</span>
+      </div>
+      <div class="chg-theme__col">
+        <span><i class="fa-solid fa-arrow-right"></i></span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="main-col">
+      <div class="reset">
+        <div class="reset__col">
+          <span>Wanna reset?</span>
         </div>
-        <div class="chg-theme__col">
-          <span><i class="fa-solid fa-arrow-right"></i></span>
+        <div class="reset__col">
+          <span><i class="fa-solid fa-arrow-rotate-right"></i></span>
         </div>
       </div>
-    </header>
+      <div class="main-box">
 
-    <main>
-      <div class="main-col">
-        <div class="reset">
-          <div class="reset__col">
-            <span>Wanna reset?</span>
-          </div>
-          <div class="reset__col">
-            <span><i class="fa-solid fa-arrow-rotate-right"></i></span>
-          </div>
-        </div>
-        <div class="main-box">
-          <form id="main-box__userName">
-            <h2>Please write your name</h2>
-            <input type="text" placeholder="Write your name and Press enter" />
-          </form>
-          <div class="main-box__todo">
-            <form id="main-box__submit">
-              <h1></h1>
-              <h3>Please write a To-Do List</h3>
-              <input type="text" placeholder="Write a To-Do and Press enter" />
-            </form>
+        <!-- 수정한 부분 -->
+        <div class="main-box__todo">
+          <h1 id='welcome'>Welcome to '이게왜되조'</h1>
+          <div class="main-box__todolist">
             <div class="main-box__todolist">
-                <!-- 추가한 부분 -->
-                <div id='team-button-box'>
-                  <a href='#team-info'>team info</a>
-                </div>
-                <div class="team-info-box">team info box</div>
-                <div id='member-button-box'>
-                  <a href='#member-info'>member info</a>
-                  <a href='#member1' class='member member1'>member1</a>
-                  <a href='#member2' class='member member2'>member2</a>
-                  <a href='#member3' class='member member3'>member3</a>
-                  <a href='#member4' class='member member4'>member4</a>
-                  <a href='#member5' class='member member5'>member5</a>
-                </div>
-                <div class="members-info-box">
-                  members info box
+              <div id='team-button-box'>
+                <a href='#team-info'>team info</a>
+              </div>
+              <div class="team-info-box">team info box</div>
+              <div id='member-button-box'>
+                <a href='#member-info'>member info</a>
+                <a href='#member1' class='member member1'>member1</a>
+                <a href='#member2' class='member member2'>member2</a>
+                <a href='#member3' class='member member3'>member3</a>
+                <a href='#member4' class='member member4'>member4</a>
+                <a href='#member5' class='member member5'>member5</a>
+              </div>
+              <div class="members-info-box" id='member1-info'>
+                <p>members info box1</p>
+              </div>
+              <div class="members-info-box" id='member2-info'>
+                <p>members info box2</p>
+              </div>
+              <div class="members-info-box" id='member3-info'>
+                <p>members info box3</p>
+              </div>
+              <div class="members-info-box" id='member4-info'>
+                <p>members info box4</p>
+              </div>
+              <div class="members-info-box" id='member5-info'>
+                <p>members info box5</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="bottom-box">
-          <div class="clock-wheather">
-            <div class="weather">
-              <div class="today-info">
-                <div class="today-info__date"></div>
-                <div class="today-info__ampm"></div>
-              </div>
-              <div class="weather-info">
-                <div class="weather-info__city-info">
-                  <div class="weather-info__city-info__city">No weather</div>
-                  <div class="weather-info__city-info__temp">-- --</div>
-                </div>
-                <div class="weather-info__main-weather">
-                  <img src="img/weather/default.png" />
-                </div>
-              </div>
+        <!-- 수정한 부분 -->
+      </div>
+      <div class="bottom-box">
+        <div class="clock-wheather">
+          <div class="weather">
+            <div class="today-info">
+              <div class="today-info__date"></div>
+              <div class="today-info__ampm"></div>
             </div>
-            <div class="clock">
-              <div class="clock-hours">
-                <div class="clock-inner"><span id="h1"></span></div>
-                <div class="clock-inner"><span id="h2"></span></div>
+            <div class="weather-info">
+              <div class="weather-info__city-info">
+                <div class="weather-info__city-info__city">No weather</div>
+                <div class="weather-info__city-info__temp">-- --</div>
               </div>
-              <div class="clock-minutes">
-                <div class="clock-inner"><span id="m1"></span></div>
-                <div class="clock-inner"><span id="m2"></span></div>
-              </div>
-              <div class="clock-seconds">
-                <div class="clock-inner"><span id="s1"></span></div>
-                <div class="clock-inner"><span id="s2"></span></div>
+              <div class="weather-info__main-weather">
+                <img src="img/weather/default.png" />
               </div>
             </div>
           </div>
-          <div class="quotes">
-            <div class="quote">
-              <span></span>
+          <div class="clock">
+            <div class="clock-hours">
+              <div class="clock-inner"><span id="h1"></span></div>
+              <div class="clock-inner"><span id="h2"></span></div>
             </div>
-            <div class="author"><span></span></div>
+            <div class="clock-minutes">
+              <div class="clock-inner"><span id="m1"></span></div>
+              <div class="clock-inner"><span id="m2"></span></div>
+            </div>
+            <div class="clock-seconds">
+              <div class="clock-inner"><span id="s1"></span></div>
+              <div class="clock-inner"><span id="s2"></span></div>
+            </div>
           </div>
+        </div>
+        <div class="quotes">
+          <div class="quote">
+            <span></span>
+          </div>
+          <div class="author"><span></span></div>
         </div>
       </div>
-      <div class="main-col">
-        <div class="side-box">
-          <!-- calendar -->
-          <div class="calendar">
-            <!-- 연도, 월 -->
-            <nav class="calendar-yearmonth">
-              <div class="calendar-yearmonth__btn">
-                <i class="fa-solid fa-arrow-left"></i>
-              </div>
-              <div class="calendar-yearmonth__col"></div>
-              <div class="calendar-yearmonth__btn">
-                <i class="fa-solid fa-arrow-right"></i>
-              </div>
-            </nav>
-            <!-- 요일 -->
-            <div class="calendar-days">
-              <div class="calendar-day"><span>S</span></div>
-              <div class="calendar-day"><span>M</span></div>
-              <div class="calendar-day"><span>T</span></div>
-              <div class="calendar-day"><span>W</span></div>
-              <div class="calendar-day"><span>T</span></div>
-              <div class="calendar-day"><span>F</span></div>
-              <div class="calendar-day"><span>S</span></div>
+    </div>
+    <div class="main-col">
+      <div class="side-box">
+        <!-- calendar -->
+        <div class="calendar">
+          <!-- 연도, 월 -->
+          <nav class="calendar-yearmonth">
+            <div class="calendar-yearmonth__btn">
+              <i class="fa-solid fa-arrow-left"></i>
             </div>
-            <!-- 일자 -->
-            <div class="calendar-date"></div>
+            <div class="calendar-yearmonth__col"></div>
+            <div class="calendar-yearmonth__btn">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </nav>
+          <!-- 요일 -->
+          <div class="calendar-days">
+            <div class="calendar-day"><span>S</span></div>
+            <div class="calendar-day"><span>M</span></div>
+            <div class="calendar-day"><span>T</span></div>
+            <div class="calendar-day"><span>W</span></div>
+            <div class="calendar-day"><span>T</span></div>
+            <div class="calendar-day"><span>F</span></div>
+            <div class="calendar-day"><span>S</span></div>
           </div>
-
-          <div class="add-day">
-            <i class="fa-solid fa-plus"></i>
-          </div>
-
-          <form class="day-submit display-none">
-            <div class="day-submit__info">
-              <input id="day-name" type="text" placeholder="What day is it?" />
-              <input id="day-date" type="date" />
-            </div>
-            <div class="day-submit__btn">
-              <div class="day-submit__btn-col">
-                <i class="fa-solid fa-circle-check"></i>
-              </div>
-              <div class="day-submit__btn-col">
-                <i class="fa-solid fa-circle-xmark"></i>
-              </div>
-            </div>
-          </form>
-
-          <div class="day-list"></div>
+          <!-- 일자 -->
+          <div class="calendar-date"></div>
         </div>
-      </div>
-    </main>
 
-    <script src="https://kit.fontawesome.com/7e7b57fe59.js" crossorigin="anonymous"></script>
-    <!-- 추가한 부분 -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- 추가한 부분 -->
-    <!-- <script src="config.js"></script> -->
-    <script src="js/background.js"></script>
-    <script src="js/user-name.js"></script>
-    <script src="js/calendar.js"></script>
-    <script src="js/d-day.js"></script>
-    <script src="js/clock-weather.js"></script>
-    <script src="js/quotes.js"></script>
-    <script src="js/todo-list.js"></script>
-    <!-- 추가한 부분 -->
-    <script src='js/member-info.js'></script>
-    <!-- 추가한 부분 -->
-  </body>
+        <div class="add-day">
+          <i class="fa-solid fa-plus"></i>
+        </div>
+
+        <form class="day-submit display-none">
+          <div class="day-submit__info">
+            <input id="day-name" type="text" placeholder="What day is it?" />
+            <input id="day-date" type="date" />
+          </div>
+          <div class="day-submit__btn">
+            <div class="day-submit__btn-col">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div class="day-submit__btn-col">
+              <i class="fa-solid fa-circle-xmark"></i>
+            </div>
+          </div>
+        </form>
+
+        <div class="day-list"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://kit.fontawesome.com/7e7b57fe59.js" crossorigin="anonymous"></script>
+  <!-- 추가한 부분 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- 추가한 부분 -->
+  <script src="config.js"></script>
+  <script src="js/background.js"></script>
+  <script src="js/user-name.js"></script>
+  <script src="js/calendar.js"></script>
+  <script src="js/d-day.js"></script>
+  <script src="js/clock-weather.js"></script>
+  <script src="js/quotes.js"></script>
+  <script src="js/todo-list.js"></script>
+  <!-- 추가한 부분 -->
+  <script src='js/member-info.js'></script>
+  <!-- 추가한 부분 -->
+</body>
+
 </html>
