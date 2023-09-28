@@ -91,11 +91,11 @@ const quotesInit = {
     quotesInit.randomNum = Math.floor(Math.random() * 20);
   },
   randomNum: 0,
-  // setQuote: function () {
-  //   quoteComp.innerText = quotes[quotesInit.randomNum].quote;
-  //   authorComp.innerText = '-' + quotes[quotesInit.randomNum].author;
-  // },
+  setQuote: function () {
+    quoteComp.innerText = quotes[quotesInit.randomNum].quote;
+    authorComp.innerText = '-' + quotes[quotesInit.randomNum].author;
+  },
 };
 
 quotesInit.makeRandomNum();
-// quotesInit.setQuote();
+quotesInit.setQuote();

@@ -11,6 +11,7 @@ $(document).ready(function () {
   $members.hide();
   $membersInfoBox.hide();
   $teamInfoBox.hide();
+  $("#comment-box").hide();
 
   // 5초 뒤에 welcome 문구 사라지게 만듦
   setTimeout(function () {
@@ -27,7 +28,8 @@ $(document).ready(function () {
     $("#member-button-box a.member").hide();
     $("#team-button-box a[href='#team-info']").hide();
     $members.hide();
-
+    $("#comment-box").show();
+    $("#today-area").hide();
     // 팀 정보 박스 보여주기
     $teamInfoBox.show();
   });
@@ -74,8 +76,10 @@ $(document).ready(function () {
     $members.hide();
     $membersInfoBox.hide();
     $teamInfoBox.hide();
+    $("#comment-box").hide();
     $("#main-box__submit").show();
     $("#team-button-box a[href='#team-info']").show();
     $("#member-button-box a[href='#member-info']").show();
+    $("#today-area").show();
   });
 });

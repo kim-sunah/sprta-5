@@ -37,7 +37,7 @@
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" style="display: flex;">
     <div class="main-col">
       <div class="reset" style="margin-right: 28rem;">
         <div class="reset__col">
@@ -48,14 +48,6 @@
         </div>
       </div>
       <div class="main-box">
-        <form id="main-box__userName">
-          <h2>Please write your name</h2>
-          <input type="text" placeholder="Write your name and Press enter" />
-          <!-- <div class = "button">
-              <button class="custom-btn btn-6"><span>Team Info</span></button>
-              <button class="custom-btn btn-6"><span>Member info</span></button>
-            </div>  -->
-        </form>
         <div class="main-box__todo ">
           <h1 id='welcome'>Welcome to '이게왜되조'</h1>
           <div class="main-box__todolist">
@@ -142,26 +134,73 @@
               </div>
             </div>
           </div>
-          <!-- <div class="main-box__todolist">
-            <img src="img/todo-init.png" class="display-none" />
-            <form class="todo-list__box">
-              <div class="todo-list__status-row">
-                <div class="todo-list__status">
-                  <div class="todo-list__status-col">Status</div>
-                  <div class="todo-list__status-col"></div>
-                </div>
-                <div class="todo-list__dlt-all"><span>Delete All</span></div>
-              </div>
-              <div class="todo-list__todos"></div>
-              <button class="todo-list__delete-btn">
-                <span class="todo-delete"><i class="fa-solid fa-trash-can"></i> DELETE</span>
-                <span class="todo-create display-none"><i class="fa-solid fa-arrow-rotate-left"></i>GO BACK</span>
-              </button>
-            </form>
-          </div> -->
         </div>
       </div>
-      <div class="side-box" style=" position: fixed; left: 85rem; bottom: 10rem;">
+      <div class="bottom-box" id="today-area">
+        <div class="clock-wheather">
+          <div class="weather">
+            <div class="today-info">
+              <div class="today-info__date"></div>
+              <div class="today-info__ampm"></div>
+            </div>
+            <div class="weather-info">
+              <div class="weather-info__city-info">
+                <div class="weather-info__city-info__city">No weather</div>
+                <div class="weather-info__city-info__temp">-- --</div>
+              </div>
+              <div class="weather-info__main-weather">
+                <img src="img/weather/default.png" />
+              </div>
+            </div>
+          </div>
+          <div class="clock">
+            <div class="clock-hours">
+              <div class="clock-inner"><span id="h1"></span></div>
+              <div class="clock-inner"><span id="h2"></span></div>
+            </div>
+            <div class="clock-minutes">
+              <div class="clock-inner"><span id="m1"></span></div>
+              <div class="clock-inner"><span id="m2"></span></div>
+            </div>
+            <div class="clock-seconds">
+              <div class="clock-inner"><span id="s1"></span></div>
+              <div class="clock-inner"><span id="s2"></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="quotes">
+          <div class="quote">
+            <span></span>
+          </div>
+          <div class="author"><span></span></div>
+        </div>
+      </div>
+      <form id="comment-box">
+        <div class="bottom-box" style="width: 35%; float:left;">
+          <div id="comment">
+            <h1> 현재 작성 게시물 수 : </h1>
+          </div>
+        </div>
+        <div class="bottom-box" style="width: 35%; float:left; overflow: hidden;">
+          <h3>
+            <하고싶은말을 적어주세요!>
+          </h3>
+          <div id="comment" style="text-align: center;">
+            <input style="text-align: center;" id="commentTitle" type="text" placeholder="제목을 입력해주세요" st></input>
+            <div class="form-floating mb-3" style="margin: 0.75rem;">
+              <textarea class="form-control" name="content" id="comment" placeholder="내용"
+                style="height: 100px; "></textarea>
+            </div>
+
+          </div>
+          <div style="text-align: center; position: relative; top:25px">
+            <button id="postingbtn" type="button" class="btn btn-danger">기록하기</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="main-col">
+      <div class="side-box">
         <!-- calendar -->
         <div class="calendar">
           <!-- 연도, 월 -->
@@ -188,7 +227,9 @@
           <div class="calendar-date"></div>
         </div>
 
-
+        <div class="add-day">
+          <i class="fa-solid fa-plus"></i>
+        </div>
 
         <form class="day-submit display-none">
           <div class="day-submit__info">
@@ -207,41 +248,6 @@
 
         <div class="day-list"></div>
       </div>
-
-
-
-      <div class="bottom-box" style="width: 35%; float:left;">
-        <div id="comment">
-          <h1> 현재 작성 게시물 수 : </h1>
-        </div>
-        <!-- <button onclick="location.href='commentNew.html'">생성</button> -->
-      </div>
-      <div class="bottom-box" style="width: 35%; float:left; overflow: hidden;">
-        <h3>
-          <하고싶은말을 적어주세요!>
-        </h3>
-        <div id="comment" style="text-align: center;">
-          <input style="text-align: center;" id="commentTitle" type="text" placeholder="제목을 입력해주세요" st></input>
-          <div class="form-floating mb-3" style="margin: 0.75rem;">
-            <textarea class="form-control" name="content" id="comment" placeholder="내용"
-              style="height: 100px; "></textarea>
-          </div>
-
-        </div>
-        <div style="text-align: center; position: relative; top:25px">
-          <button id="postingbtn" type="button" class="btn btn-danger">기록하기</button>
-
-        </div>
-
-
-      </div>
-
-    </div>
-    </div>
-
-
-    <div class="main-col">
-
     </div>
   </main>
 

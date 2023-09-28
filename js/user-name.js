@@ -11,7 +11,7 @@ function submitUsernameDisplay() {
 function todoDisplay(userName) {
   submitForm.classList.add('display-none');
   todoDiv.classList.remove('display-none');
-  todoUsername.innerText = `Hello ${userName}`;
+  // todoUsername.innerText = `Hello ${userName}`;
 }
 
 function saveUsername(userName) {
