@@ -33,20 +33,11 @@
   #comment_input input:focus {
     outline: none;
   }
-  .reset{
-    margin-right: 7rem;
 
-  }
  
-.form-floating{
-  width: 100%;
-  height: 80%;
-}
-.form-control{
-  border:  1px solid black;
-}
+
 .btn {
-  background-color: white;
+  background-color: yellow;
   border: none;
   color: black;
   cursor: pointer;
