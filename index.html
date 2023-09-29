@@ -47,7 +47,33 @@
           <span><i class="fa-solid fa-arrow-rotate-right"></i></span>
         </div>
       </div>
-      <div class="main-box">
+       <div class="main-box">  <!--style="background-color:transparent; box-shadow: none;" -->
+        <form id="main-box__userName">
+          <div class="card text-center">
+            <div class="card-header">
+              Featured
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card text-center">
+            <div class="card-header">
+              Featured
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+
+          </div>
+
+
+
+        </form>
         <div class="main-box__todo ">
           <h1 id='welcome'>Welcome to '이게왜되조'</h1>
           <div class="main-box__todolist">
@@ -235,9 +261,33 @@
 
         <div class="day-list"></div>
       </div>
+
+
+
+      <div class="bottom-box" style="width: 35%; float:left;">
+        <div id="comment">
+          <h1> 현재 작성 게시물 수 : </h1>
+        </div>
+        <!-- <button onclick="location.href='commentNew.html'">생성</button> -->
+      </div>
+      <div class="bottom-box" style="width: 35%; float:left; overflow: hidden;">
+        <h3> <하고싶은말을 적어주세요!> </h3>
+        <div id="comment" style="text-align: center;">
+            <input style="text-align: center;" id="commentTitle" type="text" placeholder="제목을 입력해주세요" st></input>
+            <div class="form-floating mb-3"   style="margin: 0.75rem;">
+              <textarea class="form-control" name="content" id="comment" placeholder="내용" style="height: 100px; "></textarea>
+            </div>
+
+        </div>
+        <div style="text-align: center; position: relative; top:25px">
+          <button id="postingbtn" type="button" class="btn btn-danger" >기록하기</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="main-col">
     </div>
   </main>
-
   <script src="https://kit.fontawesome.com/7e7b57fe59.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/background.js"></script>
@@ -248,7 +298,7 @@
   <script src="js/quotes.js"></script>
   <!-- <script src="js/todo-list.js"></script> -->
   <script src="js/commentList.js" type="module"></script>
-  <script src='js/member-info.js'></script>
+  <script src="js/member-info.js"></script>
   <!-- <script src="js/commentEdit.js" type="module"></script> -->
 </body>
 
