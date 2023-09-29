@@ -1,5 +1,5 @@
 const submitForm = document.getElementById('main-box__userName');
-const submitInput = submitForm.querySelector('input');
+// const submitInput = submitForm.querySelector('input');
 const todoDiv = document.querySelector('.main-box__todo');
 const todoUsername = todoDiv.querySelector('h1');
 

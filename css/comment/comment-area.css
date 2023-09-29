@@ -1,4 +1,29 @@
 
+#comment { 
+  margin-left: 4%;
+  width: 80%;
+  height: 4vh;
+}
+
+#postingbtn{
+margin: 1vh;
+width: 10%;
+height: 4vh;
+}
+
+#comment-list li {
+  list-style: none;
+  margin-top: 3%;
+}
+
+#comment-list li span{
+  margin-left: 5%;
+  font-size: 20px;
+}
+
+#comment-list li span:nth-child(3){
+  margin-left: 8%;
+}
 
 #comment_input {
     height: 100%;
