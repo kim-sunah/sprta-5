@@ -2,8 +2,8 @@
 const member1 = document.getElementById("member1-info");
 const memberArea = document.getElementById("member-area");
 $('.member1').on('click',function(){
-    memberArea.style.justifyContent ="flex-start";
-    memberArea.style.width ="100%";
+    // memberArea.style.justifyContent ="flex-start";
+    // memberArea.style.width ="100%";
     member1.innerHTML = `
     <h1>김선아</h1>
     <h3>나의 MBTI</h3>
