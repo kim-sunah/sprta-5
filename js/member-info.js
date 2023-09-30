@@ -19,7 +19,7 @@ $(document).ready(function () {
   setTimeout(function () {
     $welcome.hide();
     $mainBoxTodolist.show();
-  }, 5000);
+  }, 2000);
 
   $("#team-button-box a").on("click", function (e) {
     e.preventDefault();
@@ -58,6 +58,7 @@ $(document).ready(function () {
     e.preventDefault();
     $members.hide();
     $membersInfoBox.show();
+    $memberCard.hide();
   });
 
   // members 링크 클릭 시 해당 멤버의 infobox만 보이게 함

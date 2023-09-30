@@ -43,10 +43,10 @@
 }
 
 .main-box__todolist {
-  width: 28vmax;
+  width: 100%;
   height: inherit;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   padding: 2vmin 2vmax;
   box-sizing: border-box;
 }
