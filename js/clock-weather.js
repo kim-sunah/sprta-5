@@ -24,6 +24,8 @@ const weatherImg = [
   'default.png',
 ];
 
+
+
 const clock = {
   getClock: function () {
     const now = new Date();
@@ -79,7 +81,7 @@ function onGeoOk(position) {
 }
 
 function onGeoError() {
-  alert('날씨 정보를 불러올 수 없습니다.');
+  // alert('날씨 정보를 불러올 수 없습니다.');
 }
 
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);

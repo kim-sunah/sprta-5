@@ -1,5 +1,5 @@
 const submitForm = document.getElementById('main-box__userName');
-const submitInput = submitForm.querySelector('input');
+// const submitInput = submitForm.querySelector('input');
 const todoDiv = document.querySelector('.main-box__todo');
 const todoUsername = todoDiv.querySelector('h1');
 
@@ -11,7 +11,7 @@ function submitUsernameDisplay() {
 function todoDisplay(userName) {
   submitForm.classList.add('display-none');
   todoDiv.classList.remove('display-none');
-  todoUsername.innerText = `Hello ${userName}`;
+  // todoUsername.innerText = `Hello ${userName}`;
 }
 
 function saveUsername(userName) {

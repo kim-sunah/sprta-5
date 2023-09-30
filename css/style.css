@@ -15,6 +15,7 @@
 @import './main/todo-list.css';
 @import './main/user-name.css';
 @import './main/todo-submit.css';
+@import "./main/membercard.css";
 
 /* side-box */
 @import './side/calendar.css';
@@ -23,10 +24,15 @@
 /* bottom-box */
 @import './bottom/clock-weather.css';
 @import './bottom/quotes.css';
+@import "./bottom/Guest.css";
+
+/* comment */
+@import './comment/comment-area.css';
 
 body {
   font-family: 'PT Sans', sans-serif;
   padding: 0 10vw;
+  overflow: hidden;
 }
 
 .background-img {
