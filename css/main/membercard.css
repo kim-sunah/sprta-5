@@ -2,6 +2,8 @@
 .membercard{
   display: flex; 
   justify-content: center;
+  /* padding-left: 32.5rem; */
+  margin-top:  5rem;
   margin-top: 2rem;
   
 
