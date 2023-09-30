@@ -21,7 +21,7 @@ blog_date = []
 for date in dates:
   blog_date.append(date.text)
 
-articles = soup.select('.article-content .link-article')
+articles = soup.select('.link-article')
 blog_article = []
 for article in articles:
   blog_article.append("https://ps5045.tistory.com" + article['href'])
