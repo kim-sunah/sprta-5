@@ -45,9 +45,9 @@ main {
 
 .reset {
   display: flex;
-  position: absolute;
-  right: 50px;
-  top: -30px;
+  /* position: absolute; */
+  /* right: 50px; */
+  top: 2%;
   font-size: 17px;
   font-weight: 700;
   cursor: pointer;

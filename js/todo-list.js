@@ -211,7 +211,7 @@ const todo = {
 };
 
 // todo.readToDo();
-todo.todoForm.addEventListener('submit', todo.saveToDo);
+// todo.todoForm.addEventListener('submit', todo.saveToDo);
 
 const todoToggles = document.querySelectorAll('.todo-btn__todo-toggle input');
 todoToggles.forEach((element) => {
