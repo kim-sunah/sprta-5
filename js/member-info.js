@@ -5,6 +5,7 @@ $(document).ready(function () {
   const $welcome = $("#welcome");
   const $mainBoxTodolist = $(".main-box__todolist");
   const $memberCard = $(".membercard");
+  const $sideBox = $(".side-box");
 
   // 페이지 로드 시 기본적으로 숨기기
   $welcome.show();
@@ -72,6 +73,8 @@ $(document).ready(function () {
     // 모든 멤버 정보 박스 숨기기
     $(`${memberId}-info`).show();
     // 해당하는 멤버 정보 박스 보이게 함
+    $sideBox.hide();
+    // 달력 숨기기
   });
 
   // 리셋 누를 시 초기화면으로 되돌림
@@ -87,5 +90,6 @@ $(document).ready(function () {
     $("#member-button-box a[href='#member-info']").show();
     $("#today-area").show();
     $memberCard.hide();
+    $sideBox.show();
   });
 });
