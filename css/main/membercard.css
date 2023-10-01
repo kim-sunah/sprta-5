@@ -23,7 +23,7 @@
   justify-content: space-between;
 }
 #member-button-box{
-  position: relative;
+  /* position: relative; */
   left: 1vw;
 }
 .card-text{
