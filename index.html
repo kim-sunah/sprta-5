@@ -43,7 +43,7 @@
         </div>
       </div>
       <div class="main-box">
-        <div class="main-box__todo ">
+        <div class="main-box__todo" >
           <h1 id='welcome'>Welcome to '이게왜되조'</h1>
           <div class="main-box__todolist" id = "member-area" style="width: 100%; padding: 0px;">
             <div class="card-container">
@@ -133,8 +133,42 @@
                 <!-- 멤버 카드 5개 -->
 
             </div>
-            <div class="members-info-box" id='member1-info'>
-              <img src="img/Introduction/solo/kim.png" style="width: 135%; height: 100%; margin: 0px; border-radius: 2rem;">
+            <div class="members-info-box" id='member1-info' style="width: 100%; height:100%; ">
+              <!-- <img src="img/Introduction/solo/kim.png" style="width: 135%; height: 100%; margin: 0px; border-radius: 2rem;"> -->
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" >
+               
+                <div class="carousel-inner" >
+                  <div class="carousel-item active">
+                    <header style="width: 100%; text-align: right; display: flex; justify-content: flex-start; padding: 2rem;">
+                      <h1>김선아</h1>
+                      <p style="margin-top: 1.5rem;">9기 Node.js</p>
+                    </header>
+                  
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active" style="list-style: none;">1. [팀]과 [자신]에 대한 설명 및 MBTI(INTP) </li>
+                    <p>
+                      밖에 한번 나갔다오면 체력이 바닥나서 아무것도 못하는 저질체력의 소유자이지만 집에서 코딩만 하면 하루종일 할수있어요
+                      호캉스를 아주 좋아하는데 집에서는 잠이 잘 안오지만 밖에나가면 잠이 쏟아져서 날잡고 하루종일 자는게 힐링이에요</p>
+                  </div>
+                  <div class="carousel-item">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">협업스타일</li>
+                    <p> 역할이 있으면 되도록 당일에 끝내려고 하는편이고 남는 시간에 수정하는편(뭐든 빨리 결과물을 내놓는걸 좋아해요) 알려주고싶은 마음은 굴뚝같은데 어휘력이 안좋아서 설명을 못해요... 
+                      코드를 짜면서 설명하는건 못해서 대신 짜주고 설명하는편입니다</p>
+                  </div>
+                  <div class="carousel-item">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">장점</li>
+                    <p>연락이 잘되요(거의 하루종일 깨있어요 언제든 텔미)
+                      성실한편...?</p>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only"></span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
             </div>
             <div class="members-info-box" id='member2-info'>
               <p>members info box2</p>
@@ -230,7 +264,7 @@
         </div>
 
         <div class="add-day" onclick="window.open('https://link.kakaopay.com/_/h8iAqBg')" >
-          <i class="fa-solid">기부니가조은기부</i>
+          <i class="fa-solid">응애 돈줘</i>
         </div>
 
         <form class="day-submit display-none">
