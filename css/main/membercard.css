@@ -18,8 +18,28 @@
 .card-container {
   display: flex;
   justify-content: space-between;
-  
-  
 }
+#team-button-box{
+  
+ 
+  border-radius: 2rem;
+
+}
+#member-button-box{
+  position: relative;
+  left: 25rem;
+  
+  
+  border-radius: 2rem;
+
+}
+.card-text{
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
+}
+
+
+
+
 
 
