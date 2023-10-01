@@ -21,6 +21,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@1,200&display=swap" rel="stylesheet">
 
 </head>
 
@@ -29,7 +32,7 @@
   <audio src="music/yesYes.mp3" type="audio/mp3" id="music" autoplay loop></audio>
   <img class="background-img" />
   <header>
-    <div class="chg-theme" style="margin-left: 80rem;">
+    <div class="chg-theme" >
       <div class="chg-theme__col">
         <span>Change Theme</span>
       </div>
@@ -53,13 +56,14 @@
         <div class="main-box__todo">
           <img src="img/Introduction/내일배움캠프.PNG" id='welcome' style="width: 100%; border-radius: 3rem;"></h1>
           <div class="main-box__todolist" id="member-area" style="padding: 0px;">
+            <div> 흐헤헤헤</div>
             <div class="card-container">
               <div id='team-button-box'>
                 <a href='#team-info'>
                   <div class="card" style="border-radius: 30%;">
                     <img src="img/Introduction/team.jpg"class="card-img-top" alt="...">
                      <div class="card-body">
-                      <p class="card-text">"이게 왜 되조"  팀 소개 </p>
+                      <p class="card-text" style="font-size: 1.4vmax; color: black;">"이게 왜 되조"  팀 소개 </p>
                     </div>
                   </div>
                 </a>
@@ -72,7 +76,7 @@
                     <img src="img/Introduction/member.jpg"class="card-img-top"
                       alt="...">
                     <div class="card-body">
-                      <p class="card-text">"이게 왜 되조"  멤버 소개 </p>
+                      <p class="card-text" style="font-size: 1.4vmax; color: black;">"이게 왜 되조"  멤버 소개 </p>
                     </div> 
                   </div>
                 </a>
@@ -139,7 +143,7 @@
             </div>
             <div class="members-info-box" id='member1-info' style="width: 100%; height:100%;">
               <!-- <img src="img/Introduction/solo/kim.png" style="width: 135%; height: 100%; margin: 0px; border-radius: 2rem;"> -->
-              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="padding: 2rem;">
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="padding: 2rem; height: 100%;">
                 <header
                   style="width: 100%; text-align: right; display: flex; justify-content: flex-start;">
                   <form action="">
@@ -148,31 +152,29 @@
                   </form>
                 </header>
                 <div class="carousel-inner" >
-                  <div class="carousel-item active"style="padding-top: 4rem;">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"
-                      style="list-style: none;">1. [팀]과 [자신]에 대한 설명 및 MBTI(INTP) </li>
+                  <div class="carousel-item active"style="padding-top:3rem; ">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active" style="list-style: none; ">1. [팀]과 [자신]에 대한 설명 및 MBTI(INTP) </li> <br>
                     <p>
                       밖에 한번 나갔다오면 체력이 바닥나서 아무것도 못하는 저질체력의 소유자이지만 집에서 코딩만 하면 하루종일 할수있어요
                       호캉스를 아주 좋아하는데 집에서는 잠이 잘 안오지만 밖에나가면 잠이 쏟아져서 날잡고 하루종일 자는게 힐링이에요</p>
                   </div>
                   <div class="carousel-item"style="padding-top: 4rem;">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">협업스타일</li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">협업스타일</li> <br>
                     <p> 역할이 있으면 되도록 당일에 끝내려고 하는편이고 남는 시간에 수정하는편(뭐든 빨리 결과물을 내놓는걸 좋아해요) 알려주고싶은 마음은 굴뚝같은데 어휘력이 안좋아서 설명을
                       못해요...
-                      코드를 짜면서 설명하는건 못해서 대신 짜주고 설명하는편입니다</p>
-                  </div>
-                  <div class="carousel-item"style="padding-top: 4rem;">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">장점</li>
+                      코드를 짜면서 설명하는건 못해서 대신 짜주고 설명하는편입니다</p> <br>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">장점</li> <br>
                     <p>연락이 잘되요(거의 하루종일 깨있어요 언제든 텔미)
                       성실한편...?</p>
                   </div>
+                  
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" >
+                  <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: black;"></span>
                   <span class="sr-only"></span>
                 </a>
                 <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="carousel-control-next-icon" aria-hidden="true"  style="background-color: black;"></span>
                   <span class="sr-only">Next</span>
                 </a>
               </div>
@@ -352,7 +354,7 @@
                 <div class="weather-info__city-info__temp">-- --</div>
               </div>
               <div class="weather-info__main-weather">
-                <img src="img/weather/default.png" />
+                <img src="img/weather/default.png" style="margin-bottom: 30%;"/>
               </div>
             </div>
           </div>
@@ -371,7 +373,7 @@
             </div>
           </div>
         </div>
-        <div class="quotes" style="font-size: larger;">
+        <div class="quotes" >
           <div class="quote">
             <span></span>
           </div>
