@@ -51,6 +51,9 @@ main {
   font-size: 17px;
   font-weight: 700;
   cursor: pointer;
+  font-size: 1vmax;
+  justify-content: end;
+  width: 100%;
 }
 
 .reset__col {

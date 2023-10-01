@@ -53,12 +53,15 @@ docs.forEach((doc) => {
     date.innerText = row['date'];
     deleteButton.innerText = "delete";
     editButton.innerText = "edit";
-    deleteButton.addEventListener("click", deleteComment);
+    // deleteButton.addEventListener("click", deleteComment);
     editButton.addEventListener("click", editComment);
     comment.addEventListener("click", viewComment);
     li.appendChild(date);
     li.innerHTML += "<br/>"
     li.appendChild(comment);
+    // li.appendChild
+    li.innerHTML += "<button id = 'commentEdit' >수정</button><button id = 'commentDelete' onclick='deleteComment()'>삭제</button>"
+    
     // li.appendChild(deleteButton);
     // li.appendChild(editButton);
     commentList.appendChild(li)
@@ -205,14 +208,15 @@ async function editComment(event) {
 async function deleteComment(event) {
 
     const li = event.target.parentElement;
-    const docSnap = await getDoc(doc(db, "comment", li.id));
-    let confirmPw = prompt("게시글의 삭제를 위해 비밀번호를 입력해주세요");
-    if (confirmPw == docSnap.data()['password']) {
-        await deleteDoc(doc(db, "comment", li.id));
-        alert('삭제 완료!');
-        li.remove();
-    } else {
-        alert('올바르지 못한 비밀번호 입니다!');
-    }
+    console.log(li)
+    // const docSnap = await getDoc(doc(db, "comment", li.id));
+    // let confirmPw = prompt("게시글의 삭제를 위해 비밀번호를 입력해주세요");
+    // if (confirmPw == docSnap.data()['password']) {
+    //     await deleteDoc(doc(db, "comment", li.id));
+    //     alert('삭제 완료!');
+    //     li.remove();
+    // } else {
+    //     alert('올바르지 못한 비밀번호 입니다!');
+    // }
 
 }

@@ -7,34 +7,8 @@ let dayList = [];
 
 const DAYLISTKEY = 'dayList';
 
-function addDaySubmitForm() {
-  dDaySubmitForm.classList.remove('display-none');
-  daySubmitInit();
-}
-
-function daySubmitInit() {
-  const todayYear = init.today.getFullYear();
-  let todayMonth = init.today.getMonth() + 1;
-  let todayDate = init.today.getDate();
-
-  if (todayMonth.toString().length === 1) {
-    todayMonth = '0' + todayMonth;
-  }
-  if (todayDate.length === 1) {
-    todayDate = '0' + todayDate;
-  }
-  dayNameInput.value = '';
-  dayDateInput.value = `${todayYear}-${todayMonth}-${todayDate}`;
-
-  const daySubmitBtn = document.querySelector(
-    '.day-submit__btn-col:first-child'
-  );
-  const dayCancelBtn = document.querySelector(
-    '.day-submit__btn-col:last-child'
-  );
-
-  daySubmitBtn.addEventListener('click', saveDay);
-  dayCancelBtn.addEventListener('click', cancelSubmit);
+function openKakaoPay(){
+  alert("aa")
 }
 
 function saveDay() {
@@ -149,5 +123,4 @@ function settingCalendar(e) {
   init.date = new Date(day);
   init.drawCalendar();
 }
-addBtn.addEventListener('click', addDaySubmitForm);
 loadDay();
