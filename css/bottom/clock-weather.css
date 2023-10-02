@@ -19,6 +19,7 @@
   height: 16vmin;
   background-color: rgb(30, 30, 30);
   border-radius: 15px;
+  margin: 0.75%
 }
 
 .clock-inner {
