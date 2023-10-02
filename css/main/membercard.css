@@ -2,7 +2,8 @@
   display: flex; 
   justify-content: center;
   /* padding-left: 32.5rem; */
-  margin-top:  5rem;
+  width: 100%;
+  
   
 
 }
@@ -10,13 +11,13 @@
   /* 다른 스타일 유지 */
   margin: 0; /* 각 카드 사이에 간격을 설정합니다. */
   width: 80%; 
-  height:50%;
+ 
   
 }
 .card-img-top{
   margin: 0;
   width: 100%; 
-  border-radius: 2rem;
+  
 }
 .card-container {
   display: flex;
