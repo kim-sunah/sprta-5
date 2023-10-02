@@ -2,7 +2,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 import { getDocs, getDoc, deleteDoc, addDoc, collection, doc, updateDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-import { query, orderBy, where} from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+import { query, orderBy, where } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 // import { getAnalytics } from "firebase/analytics";
 
 // Firebase 구성 정보 설정
@@ -46,7 +46,7 @@ async function getCommentList() {
         orderBy('date', 'desc')
     );
     let docs = await await getDocs(q);
-    
+
     commentList.innerHTML = ""
     docs.forEach((doc) => {
         let row = doc.data();
@@ -102,23 +102,10 @@ async function addComment() {
             'date': dateString,
         }
         await addDoc(collection(db, "comment"), doc);
-        // const li = document.createElement("li")
-        // const span = document.createElement("span")
-        // const deleteButton = document.createElement("button");
-        // const editButton = document.createElement("button");
-        // const date = document.createElement("span");
-        // date.innerText = dateString;
-        // span.innerText = comment;
-        // // editButton.innerText = "edit";
-        // // deleteButton.innerText = "delete";
-        // li.appendChild(date);
-        // li.innerHTML += "<br/>"
-        // li.appendChild(span);
-        // commentList.prepend(li)
         alert('저장 완료!');
         $("#comment").val("");
         commentList.innerHTML = ""
-        getCommentList() 
+        getCommentList()
     }
 }
 
@@ -151,8 +138,8 @@ async function editComment(event) {
                     'comment': comment,
                 });
                 alert('수정 완료!');
-                changeText.childNodes[2].textContent = comment;
-                getCommentList();
+                commentList.innerHTML = ""
+                getCommentList()
             })
 
     } else {
