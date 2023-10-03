@@ -8,6 +8,7 @@ $(document).ready(function () {
   const $calendar = $(".calendar");
   const $cardContainer = $(".card-container");
   const $introduction = $(".Introduction");
+  const $crawling = $(".crawling_div");
 
   // 페이지 로드 시 기본적으로 숨기기
   $welcome.show();
@@ -18,6 +19,7 @@ $(document).ready(function () {
   $("#comment-box").hide();
   $memberCard.hide();
   $introduction.hide();
+  $crawling.hide();
 
   // 5초 뒤에 welcome 문구 사라지게 만듦
   setTimeout(function () {
@@ -80,6 +82,7 @@ $(document).ready(function () {
     // 달력 숨김
     $calendar.hide();
     $cardContainer.hide();
+    $crawling.show();
   });
 
   // 리셋 누를 시 초기화면으로 되돌림
@@ -98,5 +101,6 @@ $(document).ready(function () {
     $calendar.show();
     $cardContainer.show();
     $introduction.hide();
+    $crawling.hide();
   });
 });
