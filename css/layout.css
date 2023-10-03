@@ -71,3 +71,9 @@ button{
 button:hover{
   text-decoration:underline;
 }
+.carousel-item{
+  padding:1rem 3rem 0 3rem;
+}
+.carousel {
+  height: 100%;
+}
