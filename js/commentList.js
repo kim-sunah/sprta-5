@@ -70,7 +70,6 @@ async function getCommentList() {
             deleteButton.style.float = "right";
             deleteButton.style.marginRight = "1vw"
             deleteButton.style.border = "none"
-            deleteButton.style.textDecoration = "underline"
             editButton.style.float = "right";
             editButton.style.marginRight = "1vw"
             editButton.style.border = "none"
