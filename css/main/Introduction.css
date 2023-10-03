@@ -1,9 +1,4 @@
-
-.Introduction_ui li{
-    font-size: 2vh;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-   
-   
-
+/* 마진에만 배경색 적용 */
+.item_Team1{
+    background-color: yellow;
 }
