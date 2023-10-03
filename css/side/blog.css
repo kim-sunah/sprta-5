@@ -1,9 +1,9 @@
-/* .container1, .container2, .container3 {
+ .crawling_div{
+  font-size: 1px;
+ }
+ .container1, .container2, .container3 {
     width: 100%;
-    height: 5vmin;
-    margin-top: 1vmin;
-    margin-bottom: 1vmin;
-    background-color: var(--btn-yellow);
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,4 +12,4 @@
     cursor: pointer;
     transition: box-shadow 0.2s ease-in-out;
     word-break: break-all;
-  } */
+  }  

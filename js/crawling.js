@@ -18,7 +18,7 @@ for(let i =1;i<=3;i++){
         const data = snapshot.val();
         const {날짜:date, 내용: contents, 링크: links, 제목: title} = data;
         // const json = JSON.stringify(data);
-        document.querySelector(`.container${i}`).innerHTML =
+        document.querySelector(` .container${i}`).innerHTML =
             `제목 : ${title}<br>
             내용 : ${contents} <br>
             날짜 : ${date} <br>
