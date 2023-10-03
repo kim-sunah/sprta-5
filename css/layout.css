@@ -62,3 +62,18 @@ main {
   align-items: center;
   margin-left: 10px;
 }
+#comment-list{
+  margin-left: 4%;
+}
+button{
+  background-color:transparent;
+}
+button:hover{
+  text-decoration:underline;
+}
+.carousel-item{
+  padding:1rem 3rem 0 3rem;
+}
+.carousel {
+  height: 100%;
+}
