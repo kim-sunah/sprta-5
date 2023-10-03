@@ -13,19 +13,15 @@ height: 4vh;
 
 #comment-list li {
   list-style: none;
-  margin-top: 3%;
+  margin-top: 0.5vh;
 }
 
-#comment-list li span{
-  margin-left: 5%;
-  /* font-size: 20px; */
-}
-#comment-list li span:nth-child(1){
+#comment-list a:nth-child(1){
   font-size: 15px;
   color: gray;
 }
-#comment-list li span:nth-child(3){
-  font-size: 20px;
+#comment-list a:nth-child(3){
+  font-size:18px;
   /* margin-left: 8%; */
 }
 
