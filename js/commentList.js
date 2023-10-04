@@ -64,9 +64,6 @@ async function getCommentList() {
             editButton.innerText = "수정";
             deleteButton.addEventListener("click", deleteComment);
             editButton.addEventListener("click", editComment);
-            // editButton.style.float = "right";
-            // editButton.style.marginRight = "1vw"
-            // editButton.style.border = "none"
             li.appendChild(deleteButton);
             li.appendChild(editButton);
         }

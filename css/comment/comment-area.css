@@ -118,7 +118,7 @@ height: 4vh;
   height: 100%;
   width: 100%;
 }
-.comment-list button{
+#comment-list button{
   float: right; 
   margin-right: 1vw; 
   border: medium;
