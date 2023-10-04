@@ -1,48 +1,60 @@
 $(document).ready(function () {
-  const $membersInfoBox = $(".members-info-box");
-  const $members = $(".member");
-  const $teamInfoBox = $(".team-info-box");
-  const $welcome = $("#welcome");
-  const $mainBoxTodolist = $(".main-box__todolist");
-  const $memberCard = $(".membercard");
-  const $calendar = $(".calendar");
-  const $cardContainer = $(".card-container");
-  const $introduction = $(".Introduction");
-  const $crawling = $(".crawling_div");
+  // 각종 div value
+  const $container = {
+    welcome: $("#welcome"),
+    mainBoxTodoList: $(".main-box__todolist"),
+    members: $(".member"),
+    membersInfoContainer: $(".members-info-box"),
+    teamInfoContainer: $(".team-info-box"),
+    commentContainer: $("#comment-box"),
+    cardContainer: $(".card-container"),
+    memberCard: $(".membercard"),
+    introduction: $(".Introduction"),
+    crwalingDiv: $(".crawling_div"),
+  };
 
-  // 페이지 로드 시 기본적으로 숨기기
-  $welcome.show();
-  $mainBoxTodolist.hide();
-  $members.hide();
-  $membersInfoBox.hide();
-  $teamInfoBox.hide();
-  $("#comment-box").hide();
-  $memberCard.hide();
-  $introduction.hide();
-  $crawling.hide();
+  const $memberInfoController = {
+    members: $(".member"),
+    memberCard: $(".membercard"),
+  };
 
-  // 5초 뒤에 welcome 문구 사라지게 만듦
-  setTimeout(function () {
-    $welcome.hide();
-    $mainBoxTodolist.show();
+  // 전체 숨김
+  Object.values($container).forEach(($el) => $el.hide());
+
+  // 최초 화면에 welcome 띄우기
+  $container.welcome.show();
+
+  // 2초 뒤에 화면 전환
+  setTimeout(() => {
+    // hide
+    $container.welcome.hide();
+    // show
+    $container.mainBoxTodoList.show();
+    $container.cardContainer.show();
   }, 2000);
+
+  // 기타 div
+  const etcElements = [
+    "#main-box__submit",
+    "#member-button-box a[href='#member-info']",
+    "#team-button-box a[href='#team-info']",
+  ];
 
   $("#team-button-box a").on("click", function (e) {
     e.preventDefault();
 
     // 모든 요소 숨기고 팀 정보 박스만 보여주기
-    $("#main-box__submit").hide();
-    $("#member-button-box a[href='#member-info']").hide();
-    $("#member-button-box a.member").hide();
-    $("#team-button-box a[href='#team-info']").hide();
-    $members.hide();
-    $memberCard.hide();
-    $("#comment-box").show();
     $("#today-area").hide();
+    $("#comment-box").show();
+    $("#member-button-box a.member").hide();
+    for (const value of etcElements) {
+      $(value).hide();
+    }
+    Object.values($memberInfoController).forEach(($el) => $el.show());
     // 팀 정보 박스 보여주기
-    $teamInfoBox.show();
-    $introduction.show();
-    $cardContainer.hide();
+    $container.teamInfoContainer.show();
+    $container.introduction.show();
+    $container.cardContainer.hide();
   });
 
   // 멤버 요소 컨트롤
@@ -52,55 +64,54 @@ $(document).ready(function () {
       e.preventDefault();
 
       // 모든 요소 숨기고 멤버 버튼만 보여주기
-      $("#main-box__submit").hide();
-      $("#team-button-box a[href='#team-info']").hide();
-      $("#member-button-box a[href='#member-info']").hide();
-      $teamInfoBox.hide();
-      $members.show();
-      $memberCard.show();
+      for (const value of etcElements) {
+        $(value).hide();
+      }
+      Object.values($memberInfoController).forEach(($el) =>
+        $el.show()
+      );
+      $container.teamInfoContainer.hide();
     }
   );
 
   // members 링크 클릭 시 infobox만 보이게 함
-  $members.on("click", function (e) {
+  $container.members.on("click", function (e) {
     e.preventDefault();
-    $members.hide();
-    $membersInfoBox.show();
-    $memberCard.hide();
+    Object.values($memberInfoController).forEach(($el) => $el.hide());
+    $container.membersInfoContainer.show();
   });
 
   // members 링크 클릭 시 해당 멤버의 infobox만 보이게 함
-  $members.on("click", function (e) {
+  $container.members.on("click", function (e) {
     e.preventDefault();
 
     // 클릭한 멤버의 href 속성 값 가져오기
     const memberId = $(this).attr("href");
     // 모든 멤버 정보 박스 숨기기
-    $membersInfoBox.hide();
+    $container.membersInfoContainer.hide();
     // 해당하는 멤버 정보 박스 보이게 함
     $(`${memberId}-info`).show();
     // 달력 숨김
-    $calendar.hide();
-    $cardContainer.hide();
-    $crawling.show();
+    $(".calendar").hide();
+    $container.cardContainer.hide();
+    // 크롤링 띄우기
+    $container.crwalingDiv.show();
   });
 
   // 리셋 누를 시 초기화면으로 되돌림
   $(".reset").on("click", function (e) {
     e.preventDefault();
 
-    $members.hide();
-    $membersInfoBox.hide();
-    $teamInfoBox.hide();
-    $("#comment-box").hide();
-    $("#main-box__submit").show();
-    $("#team-button-box a[href='#team-info']").show();
-    $("#member-button-box a[href='#member-info']").show();
+    Object.values($container).forEach((el) => el.hide());
+    Object.values($memberInfoController).forEach(($el) => $el.hide());
+
+    for (const value of etcElements) {
+      $(value).show();
+    }
+
     $("#today-area").show();
-    $memberCard.hide();
-    $calendar.show();
-    $cardContainer.show();
-    $introduction.hide();
-    $crawling.hide();
+    $(".calendar").show();
+    $container.mainBoxTodoList.show();
+    $container.cardContainer.show();
   });
 });
