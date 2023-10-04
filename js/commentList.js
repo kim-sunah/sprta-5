@@ -40,7 +40,7 @@ var seconds = ('0' + today.getSeconds()).slice(-2);
 var dateString = year + '-' + month + '-' + day + " " + hours + ':' + minutes + ':' + seconds;;
 //리스트 출력
 
-$container.postingbtn.on("click", addComment);
+$container.postingbtn.on("click", await addComment);
 $container.commentBox.on("submit", (event) => {
     event.preventDefault();
 })
@@ -62,14 +62,14 @@ async function getCommentList() {
                  <a>${row['comment']}</a>
                 </li>
             `)
-            
+
         if (localStorage.getItem("userName") == row['userName']) {
-            $("#"+doc.id).append(`<button id = "deleteBtn">삭제</button>
+            $("#" + doc.id).append(`<button id = "deleteBtn">삭제</button>
             <button id="editBtn">수정</button>`);
         }
     })
-    $("#deleteBtn").on('click', deleteComment);
-    $("#editBtn").on('click', editComment);
+    $("#deleteBtn").on('click', await deleteComment);
+    $("#editBtn").on('click', await editComment);
 }
 
 async function addComment() {
