@@ -11,6 +11,7 @@ $(document).ready(function () {
     memberCard: $(".membercard"),
     introduction: $(".Introduction"),
     crwalingDiv: $(".crawling_div"),
+    teamName: $(".team-name"),
   };
 
   const $memberInfoController = {
@@ -31,6 +32,7 @@ $(document).ready(function () {
     // show
     $container.mainBoxTodoList.show();
     $container.cardContainer.show();
+    $container.teamName.show();
   }, 2000);
 
   // 기타 div
@@ -65,6 +67,7 @@ $(document).ready(function () {
       etcElements.forEach((value) => $(value).hide());
       showElements($memberInfoController);
       $container.teamInfoContainer.hide();
+      $container.teamName.hide();
     }
   );
 
@@ -105,6 +108,7 @@ $(document).ready(function () {
     $(".calendar").show();
     $container.mainBoxTodoList.show();
     $container.cardContainer.show();
+    $container.teamName.show();
   });
 
   // 가독성 함수 모음
