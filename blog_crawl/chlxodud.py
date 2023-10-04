@@ -2,29 +2,29 @@
 import requests
 from bs4 import BeautifulSoup
 
-response = requests.get("https://ps5045.tistory.com")
+response = requests.get("https://chlxodud.tistory.com")
 html = response.text
 soup = BeautifulSoup(html, "html.parser")
 
-titles = soup.select('.title')
+titles = soup.select('.txt_title')
 blog_title = []
 for title in titles:
   blog_title.append(title.text.strip())
 
-summation = soup.select('.summary')
+summation = soup.select('.cont_thumb .txt_thumb')
 blog_summary = []
 for summary in summation:
   blog_summary.append(summary.text.strip())
 
-dates = soup.select('.date')
+dates = soup.select('.thumb_info .date')
 blog_date = []
 for date in dates:
   blog_date.append(date.text)
 
-articles = soup.select('.link-article')
+articles = soup.select('.inner_content .link_thumb')
 blog_article = []
 for article in articles:
-  blog_article.append("https://ps5045.tistory.com" + article['href'])
+  blog_article.append("https://chlxodud.tistory.com" + article['href'])
 
 # i=0
 # while i < 5:
@@ -56,34 +56,17 @@ firebase_admin.initialize_app(cred,{
 
 def putdata():
 
-  ref = db.reference('유덕/1')
+  ref = db.reference('태영/1')
   ref.update({'제목':blog_title[0]})
   ref.update({'내용':blog_summary[0]})
   ref.update({'날짜':blog_date[0]})
   ref.update({'링크':blog_article[0]})
 
-  ref = db.reference('유덕/2')
+  ref = db.reference('태영/2')
   ref.update({'제목':blog_title[1]})
   ref.update({'내용':blog_summary[1]})
   ref.update({'날짜':blog_date[1]})
   ref.update({'링크':blog_article[1]})
 
-  ref = db.reference('유덕/3')
-  ref.update({'제목':blog_title[2]})
-  ref.update({'내용':blog_summary[2]})
-  ref.update({'날짜':blog_date[2]})
-  ref.update({'링크':blog_article[2]})
-
-  ref = db.reference('유덕/4')
-  ref.update({'제목':blog_title[3]})
-  ref.update({'내용':blog_summary[3]})
-  ref.update({'날짜':blog_date[3]})
-  ref.update({'링크':blog_article[3]})
-
-  ref = db.reference('유덕/5')
-  ref.update({'제목':blog_title[4]})
-  ref.update({'내용':blog_summary[4]})
-  ref.update({'날짜':blog_date[4]})
-  ref.update({'링크':blog_article[4]})
 
 putdata()
