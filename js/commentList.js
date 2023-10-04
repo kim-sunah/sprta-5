@@ -27,8 +27,6 @@ const $container = {
     comment: $("comment"),
     commentBox: $('#comment-box'),
 };
-// const commentList = document.querySelector("#comment-list");
-
 
 var today = new Date();
 var year = today.getFullYear();
@@ -57,24 +55,17 @@ async function getCommentList() {
     $container.commentList.html("")
     docs.forEach((doc) => {
         let row = doc.data();
-
-        if (localStorage.getItem("userName") == row['userName']) {
-            $container.commentList.append(
-                `<li id = ${doc.id}>
+        $container.commentList.append(
+            `<li id = ${doc.id}>
                 <a>${row['date']}</a>
                   </br>
                  <a>${row['comment']}</a>
-                 <button id = "deleteBtn">삭제</button>
-                 <button id="editBtn">수정</button>
                 </li>
             `)
-        } else {
-            $container.commentList.append(
-                `<li id = ${doc.id}>
-                <a>${row['date']}</a>
-                  </br>
-                 <a>${row['comment']}</a>
-            `)
+            
+        if (localStorage.getItem("userName") == row['userName']) {
+            $("#"+doc.id).append(`<button id = "deleteBtn">삭제</button>
+            <button id="editBtn">수정</button>`);
         }
     })
     $("#deleteBtn").on('click', deleteComment);
@@ -112,8 +103,8 @@ async function editComment(event) {
     const docSnap = await getDoc(doc(db, "comment", li.id));
 
     if (confirmPw == docSnap.data()['password']) {
-        
-        let change = $("#"+li.id)
+
+        let change = $("#" + li.id)
 
         li.innerHTML = ` 
         <form>
