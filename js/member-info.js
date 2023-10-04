@@ -18,8 +18,8 @@ $(document).ready(function () {
     memberCard: $(".membercard"),
   };
 
-  // 전체 숨김
-  Object.values($container).forEach(($el) => $el.hide());
+  // 초기 화면 설정
+  hideElements($container);
 
   // 최초 화면에 welcome 띄우기
   $container.welcome.show();
@@ -47,10 +47,8 @@ $(document).ready(function () {
     $("#today-area").hide();
     $("#comment-box").show();
     $("#member-button-box a.member").hide();
-    for (const value of etcElements) {
-      $(value).hide();
-    }
-    Object.values($memberInfoController).forEach(($el) => $el.show());
+    etcElements.forEach((value) => $(value).hide());
+    showElements($memberInfoController);
     // 팀 정보 박스 보여주기
     $container.teamInfoContainer.show();
     $container.introduction.show();
@@ -64,12 +62,8 @@ $(document).ready(function () {
       e.preventDefault();
 
       // 모든 요소 숨기고 멤버 버튼만 보여주기
-      for (const value of etcElements) {
-        $(value).hide();
-      }
-      Object.values($memberInfoController).forEach(($el) =>
-        $el.show()
-      );
+      etcElements.forEach((value) => $(value).hide());
+      showElements($memberInfoController);
       $container.teamInfoContainer.hide();
     }
   );
@@ -77,7 +71,7 @@ $(document).ready(function () {
   // members 링크 클릭 시 infobox만 보이게 함
   $container.members.on("click", function (e) {
     e.preventDefault();
-    Object.values($memberInfoController).forEach(($el) => $el.hide());
+    hideElements($memberInfoController);
     $container.membersInfoContainer.show();
   });
 
@@ -102,16 +96,23 @@ $(document).ready(function () {
   $(".reset").on("click", function (e) {
     e.preventDefault();
 
-    Object.values($container).forEach((el) => el.hide());
-    Object.values($memberInfoController).forEach(($el) => $el.hide());
+    hideElements($container);
+    hideElements($memberInfoController);
 
-    for (const value of etcElements) {
-      $(value).show();
-    }
+    etcElements.forEach((value) => $(value).show());
 
     $("#today-area").show();
     $(".calendar").show();
     $container.mainBoxTodoList.show();
     $container.cardContainer.show();
   });
+
+  // 가독성 함수 모음
+  function showElements(elements) {
+    Object.values(elements).forEach(($el) => $el.show());
+  }
+
+  function hideElements(elements) {
+    Object.values(elements).forEach(($el) => $el.hide());
+  }
 });
