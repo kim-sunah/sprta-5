@@ -21,15 +21,11 @@ blog_date = []
 for date in dates:
   blog_date.append(date.text)
 
-articles = soup.select('.link-article')
+articles = soup.select('.article-content .link-article')
 blog_article = []
 for article in articles:
   blog_article.append("https://sunalog.tistory.com" + article['href'])
 
-# i=0
-# while i < 5:
-#   print(blog_title[i], blog_summary[i], blog_date[i], blog_article[i])
-#   i = i+1
 
 #파이어베이스에 데이터 저장
 import firebase_admin
