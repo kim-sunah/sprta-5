@@ -8,6 +8,11 @@ header {
   font-weight: 700;
   display: flex;
   margin-top: 10px;
+  font-size: 1vmax;
+  
+  width: 100%;
+  justify-content: end;
+  
 }
 
 .chg-theme__col {

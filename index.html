@@ -21,13 +21,22 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@1,200&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
+
+  <audio src="music/yesYes.mp3" type="audio/mp3" id="music" autoplay loop></audio>
   <img class="background-img" />
   <header>
-    <div class="chg-theme" style="margin-left: 80rem;">
+    <div class="chg-theme">
       <div class="chg-theme__col">
         <span>Change Theme</span>
       </div>
@@ -48,166 +57,516 @@
         </div>
       </div>
       <div class="main-box">
+        <div class="main-box__todo">
+          <img src="img/Introduction/내일배움캠프.PNG" id='welcome' style="width: 100%; border-radius: 3rem;"></h1>
+          <div class="main-box__todolist" id="member-area" style="width: 100%;">
+            <!--Team 소개-->
+            <div class="Introduction" style="width: 100%; display: flex; ">
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"style="padding: 0.5rem 2rem; width: 100%;">
 
-        <div class="main-box__todo" >
-          <img src="img/start/표지.png" id='welcome' style="width: 100%; border-radius: 3rem;"> </img>
-          <div class="main-box__todolist">
-            <div class="main-box__todolist">
-              <div class="card-container">
-                <div id='team-button-box'>
-                  <a href='#team-info'>
-                    <div class="card" style="width: 18rem; border-radius: 2rem; margin-left: 3rem;">
-                      <img src="img/Introduction/team-challenge-clipart-8.jpg"
-                        style="width: 100%; margin: 0px; height: 200px; border-radius: 2rem;" class="card-img-top"
-                        alt="...">
-                      <div class="card-body">
-                        <p class="card-text">Team info </p>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+                    <header style="width: 100%; text-align: right; display: flex; justify-content: flex-start; padding-left: 3rem; font-size: 3vmax;">
+                      <h1 style="width: 100%; text-align: center; font-family: 'Josefin Sans', sans-serif;  text-decoration: underline brown;">Team Promise </h1>
+                    </header>
+                    <div >
+                      <div  style="display: flex; justify-content: space-between; margin-top: 8%; font-family: 'Josefin Sans', sans-serif;  ">
+                        <div class="alert alert-primary" role="alert" style="font-size: 0.75vmax;"> 지각 하지 않기 </div>
+                        <div class="alert alert-secondary" role="alert" style="font-size: 0.75vmax;"> 1시간정도 해보고 모르겠다면 물어보기 </div>
+                        <div class="alert alert-success" role="alert"  style="font-size: 0.75vmax;"> 포기하지 않기 </div>
+                        <div class="alert alert-danger" role="alert" style="font-size: 0.75vmax;"> 회의시간 지키기 </div>
+                      </div>
+                      <div  class="item_Team" style="display: flex; justify-content: space-between;margin-top: 10%; font-family: 'Josefin Sans', sans-serif; ">
+                        <div class="alert alert-warning" role="alert"  style="font-size: 0.75vmax;"> 가족같은 분위기~^^♡ </div>
+                        <div class="alert alert-info" role="alert"  style="font-size: 0.75vmax;"> 회의 때 의견 활발하게 공유하기 </div>
+                        <div class="alert alert-light" role="alert" style="font-size: 0.75vmax;"> 복습 잘하기 </div>
+                        <div class="alert alert-dark" role="alert"  style="font-size: 0.75vmax;"> T 발언 하지 않기 </div>
                       </div>
                     </div>
-                  </a>
+
+
+
+
+
+                  </div>
+
+                </div>
+                <div class="carousel-item">
+                  <div data-target="#carouselExampleIndicators" data-slide-to="0" class="active"style="list-style: none;">
+                    <header style="width: 100%; text-align: right; display: flex; justify-content: flex-start; padding-left: 3rem;  font-size: 3vmax;">
+                      <h1 style="width: 100%; text-align: center; font-family: 'Josefin Sans', sans-serif;  text-decoration: underline brown;">Team Goals </h1>
+                    </header>
+
+                    <div>
+                      <div class="alert alert-primary" role="alert"  style="font-size: 0.75vmax;">태영 : 복습 잘하고 각자의 역할을 잘하는 팀 </div>
+                      <div class="alert alert-secondary" role="alert"  style="font-size: 0.75vmax;">선아 : 아프지말고 끝가지 건강히 수료하기</div>
+                      <div class="alert alert-success" role="alert"  style="font-size: 0.75vmax;">유덕 : 실력을 쌓아서 외주를 맡을 수 있는 수준이 될수 있는 팀!</div>
+                      <div class="alert alert-danger" role="alert"  style="font-size: 0.75vmax;">지원 : 소통잘하고 서로맡은 일에 최선을 다하는 팀!</div>
+                      <div class="alert alert-warning" role="alert"  style="font-size: 0.75vmax;"> 윤찬 : 프로젝트를 거듭할수록 발전해나가는 팀! </div>
+
+                    </div>
+
+
+
+                  </div>
+
+
                 </div>
 
-                <div class="team-info-box">team info box</div>
-                <div id='member-button-box'>
-                  <a href='#member-info'>
-                    <div class="card" style="width: 18rem;  border-radius: 2rem; margin-right: 3rem;">
-                      <img src="img/Introduction/R.jpg"
-                        style="width: 100%; margin: 0px; height: 200px; border-radius: 2rem;" class="card-img-top"
-                        alt="...">
-                      <div class="card-body">
-                        <p class="card-text">Member info</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only"></span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
 
-                <!-- 멤버 카드 5개 -->
-                <div class="membercard">
-                  <a href='#member1' class='member member1'>
-                    <div class="card" style=" width: 12rem;  border-radius: 2rem;">
-                      <img class="card-img-top" style="margin: 0; width: 100%; border-radius: 2rem;"
-                        src="img/Introduction/선아.jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <h5 class="card-title"
-                          style=" width: 100%; text-align: center;  font-family: 'Yellowtail', cursive;">Kim Sunah</h5>
-                      </div>
-                    </div>
-                  </a>
-                  <a href='#member2' class='member member2'>
-                    <div class="card" style="width: 12rem;   border-radius: 2rem;">
-                      <img class="card-img-top" style="margin: 0; width: 100%; border-radius: 2rem;"
-                        src="img/Introduction/윤찬.jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <h5 class="card-title"
-                          style=" width: 100%; text-align: center;  font-family: 'Yellowtail', cursive;">Kim Yunchan
-                        </h5>
-                      </div>
-                    </div>
-                  </a>
-                  <a href='#member3' class='member member3'>
-                    <div class="card" style="width: 12rem;   border-radius: 2rem;">
-                      <img class="card-img-top" style="margin: 0; width: 100%; border-radius: 2rem;"
-                        src="img/Introduction/태영.jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <h5 class="card-title"
-                          style=" width: 100%; text-align: center;  font-family: 'Yellowtail', cursive;">Choi Taeyoung
-                        </h5>
-                      </div>
-                    </div>
-                  </a>
-                  <a href='#member4' class='member member4'>
-                    <div class="card" style="width: 12rem;    border-radius: 2rem;">
-                      <img class="card-img-top" style="margin: 0; width: 100%; border-radius: 2rem;"
-                        src="img/Introduction/지원.png" alt="Card image cap">
-                      <div class="card-body">
-                        <h5 class="card-title"
-                          style=" width: 100%; text-align: center;  font-family: 'Yellowtail', cursive;">Yeom Jiwon</h5>
-                      </div>
-                    </div>
-                  </a>
-                  <a href='#member5' class='member member5'>
-                    <div class="card" style="width: 12rem;  border-radius: 2rem; ">
-                      <img class="card-img-top" style="margin: 0; width: 100%; border-radius: 2rem;"
-                        src="img/Introduction/유덕.png" alt="Card image cap">
-                      <div class="card-body">
-                        <h5 class="card-title"
-                          style=" width: 100%; text-align: center;  font-family: 'Yellowtail', cursive;">Park Yoo-deok
-                        </h5>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <!-- 멤버 카드 5개 -->
 
+
+
+
+            </div>
+            <!--Team 소개-->
+
+
+
+            <div class="card-container" style="width: 100%; height: 100%;">
+              <div id='team-button-box' style="z-index: 10;">
+                <a href='#team-info'>
+                  <div class="card" style="border-radius: 30%;">
+                    <img src="img/Introduction/team.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text" style="font-size: 1.4vmax; color: black;">"이게 왜 되조" 팀 소개 </p>
+                    </div>
+                  </div>
+                </a>
               </div>
-              <div class="members-info-box" id='member1-info'>
-                <p>members info box1</p>
+              <!-- <div class="team-info-box">team info box</div> -->
+
+
+
+
+              <div id='member-button-box' style="z-index: 10;">
+                <a href='#member-info'>
+                  <div class="card" style="border-radius: 30%;">
+                    <img src="img/Introduction/member.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text" style="font-size: 1.4vmax; color: black;">"이게 왜 되조" 멤버 소개 </p>
+                    </div>
+                  </div>
+                </a>
               </div>
-              <div class="members-info-box" id='member2-info'>
-                <p>members info box2</p>
+
+              <!-- 멤버 카드 5개 -->
+              <div class="membercard">
+
+                <a href='#member1' class='member member1' style="width: 25%;  margin: 0.75%;">
+                  <div class="card" style="width: 100%;  height: 100%;">
+                    <img class="card-img-top" src="img/Introduction/선아.jpg" style="border-radius: 0;"
+                      alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"
+                        style=" width: 100%; text-align: center;  font-family: 'Yellowtail', cursive; font-size: 1vmax;">
+                        Kim Sunah</h5>
+                    </div>
+                  </div>
+                </a>
+                <a href='#member2' class='member member2' style="width: 25%;  margin: 0.75%; ">
+                  <div class="card" style="width: 100%;  height: 100%; ">
+                    <img class="card-img-top" src="img/Introduction/윤찬.jpg" style="border-radius: 0;"
+                      alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"
+                        style=" width: 100%; text-align: center;  font-family: 'Yellowtail', cursive; font-size: 1vmax;">
+                        Kim Yunchan
+                      </h5>
+                    </div>
+                  </div>
+                </a>
+                <a href='#member3' class='member member3' style="width: 25%;   margin: 0.75%;">
+                  <div class="card" style="width: 100%; height: 100%; ">
+                    <img class="card-img-top" src="img/Introduction/태영.png" style="border-radius: 0;"
+                      alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"
+                        style=" width: 100%; text-align: center;  font-family: 'Yellowtail', cursive; font-size: 1vmax;">
+                        Choi Taeyoung
+                      </h5>
+                    </div>
+                  </div>
+                </a>
+                <a href='#member4' class='member member4' style="width: 25%;  margin: 0.75%; ">
+                  <div class="card" style="width: 100%;   height: 100%; ">
+                    <img class="card-img-top" src="img/Introduction/지원.png" style="border-radius: 0;"
+                      alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"
+                        style=" width: 100%; text-align: center;  font-family: 'Yellowtail', cursive; font-size: 1vmax;">
+                        Yum Jiwon</h5>
+                    </div>
+                  </div>
+                </a>
+                <a href='#member5' class='member member5' style="width: 25%;  margin: 0.75%; ">
+                  <div class="card" style="width: 100%; height: 100%; ">
+                    <img class="card-img-top" src="img/Introduction/유덕.png" style="border-radius: 0;"
+                      alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"
+                        style=" width: 100%; text-align: center;  font-family: 'Yellowtail', cursive; font-size: 1vmax;">
+                        Park Yoo-deok
+                      </h5>
+                    </div>
+                  </div>
+                </a>
               </div>
-              <div class="members-info-box" id='member3-info'>
-                <p>members info box3</p>
+              <!-- 멤버 카드 5개 -->
+            </div>
+            <div class="members-info-box" id='member1-info' style="width: 100%; height:100%;">
+              <!-- <img src="img/Introduction/solo/kim.png" style="width: 135%; height: 100%; margin: 0px; border-radius: 2rem;"> -->
+              <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel"
+                style="padding: 0.5rem 2rem;">
+                <header
+                  style="width: 100%; text-align: right; display: flex; justify-content: flex-start; padding-left: 3rem;">
+                  <form action="">
+                    <h1 style="display: inline;">김선아</h1>
+                    <h5>9기 Node.js</h5>
+                  </form>
+                </header>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"
+                      style="list-style: none;">1. [팀]과 [자신]에 대한 설명 및 MBTI(INTP) </li>
+                    <br>
+                    <p>
+                      밖에 한번 나갔다오면 체력이 바닥나서 아무것도 못하는 저질체력의 소유자이지만 집에서 코딩만 하면 하루종일 할수있어요
+                    </p>
+                    <p>
+                      호캉스를 아주 좋아하는데 집에서는 잠이 잘 안오지만 밖에나가면 잠이 쏟아져서 날잡고 하루종일 자는게 힐링이에요</p>
+                  </div>
+                  <div class="carousel-item">
+                    <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"
+                      style="list-style: none;">2. 협업스타일</li>
+                    <br>
+                    <p> 역할이 있으면 되도록 당일에 끝내려고 하는편이고 남는 시간에 수정하는편(뭐든 빨리 결과물을 내놓는걸 좋아해요)</p>
+                    <p>알려주고싶은 마음은 굴뚝같은데 어휘력이 안좋아서 설명을못해요...
+                    </p>
+                    <p>
+                      코드를 짜면서 설명하는건 못해서 대신 짜주고 설명하는편입니다</p>
+                  </div>
+                  <div class="carousel-item">
+                    <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"
+                      style="list-style: none;">3. 장점</li>
+                    <br>
+                    <p>연락이 잘되요(거의 하루종일 깨있어요 언제든 텔미)
+                      성실한편...?</p>
+                  </div>
+
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only"></span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
               </div>
-              <div class="members-info-box" id='member4-info'>
-                <p>members info box4</p>
+            </div>
+            <div class="members-info-box" id='member2-info' style="width: 100%; height:100%; ">
+              <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel"
+                style="padding: 0.5rem 2rem;">
+                <header
+                  style="width: 100%; text-align: right; display: flex; justify-content: flex-start; padding-left: 3rem;">
+                  <form action="">
+                    <h1 style="display: inline;">김윤찬</h1>
+                    <h5>9기 Node.js</h5>
+                  </form>
+                </header>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"
+                      style="list-style: none;">1. [팀]과 [자신]에 대한 설명 및 MBTI(INTP) </li>
+                    <br />
+                    <p>
+                      저는 경제를 전공했습니다. 금융공기업 인턴을 깔짝하며 여러번 공채 준비하다 포기했습니다.
+                      전문성이 있는 직업을 갖고 싶다고 생각하던 와중 개발자라는 직업을 알게 되어 준비하게 되었습니다.
+                    </p>
+                    <a>ENFP ENFJ</a>
+                    <br>
+                    <a>E -새로운 사람들과 만나는 것을 좋아합니다</a>
+                    <br>
+                    <a>N - 상상을 달고 사는 것 같아요</a>
+                    <br>
+                    <a>F - 팀의 유일한 F인듯...? 공감능력 100%예요.</a>
+                    <br>
+                    <a>P,J - 일적인 부분은 무조건 계획을 지켜야 직성이 풀리는 스타일입니다.</a>
+                    <br>
+                    <a>일적 외의 부분은 즉석으로 뭐 하기 좋아하는 스타일이라 P적인 부분이 강한거 같습니다.</a>
+                  </div>
+                  <div class="carousel-item">
+                    <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"
+                      style="list-style: none;">2. 협업스타일</li>
+                    <br />
+                    <a>주도적으로 일을 끌고 나가는 것을 좋아합니다.</a>
+                    <br />
+                    <a>또한 최대한 많은 사람의 의견을 듣고 해결점을 찾아가는 스타일입니다.</a>
+                    <br />
+                    <a>팀에 의욕이 없는 사람이 있으면 놔두고 그냥 제가 다 하는게 편합니다.</a>
+                    <br />
+                    <a>사실 유덕님이나 선아님처럼 코딩을 잘해서 앞에서 끌어나가고 싶지만 그렇지 못해 열심히 하고 있습니다!!</a>
+                    <br />
+                    <a>코딩에서 제가 누군가를 이끌어 갈만큼 잘해지는 것이 저의 목표입니다.</a>
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"
+                      style="list-style: none;">3. 장점</li>
+                    <br>
+                    <a>친화력이 좋은 편이라고 생각합니다.</a>
+                    <br>
+                    <a> 끈기가 있는 편입니다.</a>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only"></span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
               </div>
-              <div class="members-info-box" id='member5-info'>
-                <p>members info box5</p>
+            </div>
+
+            <div class="members-info-box" id='member3-info' style="width: 100%; height:100%; ">
+              <div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel"
+                style="padding: 0.5rem 2rem;">
+                <header
+                  style="width: 100%; text-align: right; display: flex; justify-content: flex-start; padding-left: 3rem;">
+                  <form action="">
+                    <h1 style="display: inline;">최태영</h1>
+                    <a>9기 Node.js</a>
+                  </form>
+                </header>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <li data-target="#carouselExampleIndicators3" data-slide-to="0" class="active"
+                      style="list-style: none;">1. [팀]과 [자신]에 대한 설명 및 MBTI(INTP) </li>
+                    <br>
+                    <p>INTP</p>
+                    <a>
+                      컴퓨터공학 현재 3학년을 다니는 상태에서 이론 위주의 공부로 인한 무기력으로 인해 실전을 배우기 위해서 이번에 휴학을 하게 된 최태영이라고 합니다.
+                    </a>
+                    <br>
+                    <a>
+                      휴학생이여서 집 밖에 안나가고 그냥 집 안에서 뒹굴뒹굴 거리는 사람입니다. 그래서 그런지 헬스장 - 집만 외출하는 상황이여서 개발에 집중할수 있는 사람입니다.(가끔씩 부모님이
+                      일시킴)</a>
+                    <br>
+                    <a>
+                      취미로는 헬스장 ,컴퓨터 게임, 개발, 애니(제일 좋아함) 이 있습니다. 그리고 T라서 그런지 공감 못하고 현실팩트 받는 성향이 있습니다. 저도 현실적으로 충고 or 지적
+                      해주는거 좋아합니다.</a>
+                  </div>
+                  <div class="carousel-item">
+                    <li data-target="#carouselExampleIndicators3" data-slide-to="0" class="active"
+                      style="list-style: none;">2. 협업스타일</li>
+                    <br>
+                    <p> 저의 협업 스타일로는 아직 협업이란걸 해본적이 없어서 차근차근 알아가야할거 같습니다,</p>
+                  </div>
+                  <div class="carousel-item">
+                    <li data-target="#carouselExampleIndicators3" data-slide-to="0" class="active"
+                      style="list-style: none;">3. 장점</li>
+                    <br>
+                    <p>객관적으로 살펴본 자신의 장점으로는 자신이 맡은 역할은 중간에 포기하지 않고 맡겨진 일을 끝까지 수행을 하여서 원하는 결과를 만든다는 장점이 있습니다.</p>
+                    <p>
+                      그리고 일을 수행하면서 막혔던 부분이 있다면 그 부분에서 더 많은 지식을 습득하여서 다음 일을 하는데 더 원활하게 수행할수 있도록 하는 빠른 습득 장점이 있습니다.</p>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators3" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only"></span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators3" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="members-info-box" id='member4-info' style="width: 100%; height:100%; ">
+              <div id="carouselExampleIndicators4" class="carousel slide" data-ride="carousel"
+                style="padding: 0.5rem 2rem;">
+                <header
+                  style="width: 100%; text-align: right; display: flex; justify-content: flex-start; padding-left: 3rem;">
+                  <form action="">
+                    <h1 style="display: inline;">염지원</h1>
+                    <h5>9기 Node.js</h5>
+                  </form>
+                </header>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <li data-target="#carouselExampleIndicators4" data-slide-to="0" class="active"
+                      style="list-style: none;">1. [팀]과 [자신]에 대한 설명 및 MBTI(INTP) </li>
+                    <br />
+                    <p>INTJ</p>
+                    <p>
+                      체교과 졸업하고 경시 준비하다가 때려치고 개발 시작했어요
+                      취미는 집에 박혀서 게임하고 만화보기입니다,,, 나가는거 힘들어요
+                      나무위키나 ebs 보는거 좋아해서 잡스럽지만 넓고 얕은 지식이 있습니다
+                      고양이를 키우고 있는데 고양이털 알레르기가 있어요(왤까)
+                      상처 잘 안받습니다 혹평 피드백 모두 환영이에요 틀린거 다 지적해주세요 하지만 무논리 시 바로 반박 들어감
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <li data-target="#carouselExampleIndicators4" data-slide-to="0" class="active"
+                      style="list-style: none;">2. 협업스타일</li>
+                    <br />
+                    <p> 원래 혼자 통나무 들기를 자처하는 주도형,,, 인데 코딩에 있어서는 불가능한걸 알고 있어 그냥 맡은 역할을 책임감을 가지고 열심히 한다고 봐주시면 되겠습니다.... 목표한
+                      것은 무조건 달성해야한다 마인드라 뭐 하나 기한과 함께 던져주시면 그건 꼭 끝낸다고 생각하시고 할일 던져주세요
+                      소통하는거 중요하다고 생각합니다 (사실 제가 모르는거 물어보려고 하는거에요) 말하는게 조금 직설적인 편이지만 사과도 빠릅니다 기분나쁘시면 바로 말해주세요</p>
+                  </div>
+                  <div class="carousel-item">
+                    <li data-target="#carouselExampleIndicators4" data-slide-to="0" class="active"
+                      style="list-style: none;">3. 장점</li>
+                    <br>
+                    <p>도전 정신이 강하고 추진력이 굉장히 좋습니다
+                      체력이 좋음
+                      기록하고 정리하는 걸 굉장히 좋아하며 계획적/체계적인 편</p>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators4" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only"></span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators4" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="members-info-box" id='member5-info' style="width: 100%; height:100%; ">
+              <div id="carouselExampleIndicators5" class="carousel slide" data-ride="carousel"
+                style="padding: 0.5rem 2rem;">
+                <header
+                  style="width: 100%; text-align: right; display: flex; justify-content: flex-start; padding-left: 3rem;">
+                  <form action="">
+                    <h1 style="display: inline;">박유덕</h1>
+                    <h5>9기 Node.js</h5>
+                  </form>
+                </header>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <li data-target="#carouselExampleIndicators5" data-slide-to="0" class="active"
+                      style="list-style: none;">1. [팀]과 [자신]에 대한 설명 및 MBTI(INTP) </li>
+                    <br>
+                    <a>ISTP</a>
+                    <br>
+                    <br>
+                    <a>제가 생각하는 저희 팀은 각자 배우고자 하는 열정이 넘치는 팀입니다.</a>
+                    <br>
+                    <a>서로 질문과 숙제를 공유하며, 각자가 서로가 맡은 일을 최선을 다해 해결하고자 하는 팀입니다.</a>
+                    <br>
+                    <a>제가 생각하는 제 자신은 호기심이 많고 궁금한 걸 참고 넘어가지 못하는 성격이며,</a>
+                    <br>
+                    <a>제 역할에 대한 책임을 굉장히 강하게 느끼는 타입입니다.</a>
+                  </div>
+                  <div class="carousel-item">
+                    <li data-target="#carouselExampleIndicators5" data-slide-to="0" class="active"
+                      style="list-style: none;">2. 협업스타일</li>
+                    <br>
+                    <a>저의 스타일은 제 일이 끝날 때까지 일에만 몰두하는 것입니다.</a>
+                    <br>
+                    <a>개인적으로 휴식 또한 중요하다고 생각하긴 하지만 하던 일을 끝내지 못한 상태의 휴식은 선호하지 않습니다.</a>
+                    <br>
+                    <a>저희 협업 스타일은 역할을 매우 중요시한다는 점입니다.</a>
+                    <br>
+                    <a>협업이라는게 각자의 역할을 충실히 해냈을 때 완벽한 시너지가 난다고 생각하여,</a>
+                    <br>
+                    <a>본인의 역량을 잘 파악하고 그것에 맞는 역할을 분배받아 원활한 협업을 이루는 것.</a>
+                    <br>
+                    <a>그게 제가 생각하는 저의 협업 스타일 같습니다.</a>
+
+                  </div>
+                  <div class="carousel-item">
+                    <li data-target="#carouselExampleIndicators5" data-slide-to="0" class="active"
+                      style="list-style: none;">3. 장점</li>
+                    <br>
+                    <a>객관적으로 살펴본 저의 장점은</a>
+                    <br>
+                    <a>한번 알아보자고 하는 것을 끝까지 찾아보고 이해할 때까지 파고든다는 점입니다.</a>
+                    <br>
+                    <a>몇몇 다른 직군에선 미련하게 보일지 몰라도, 개발자라는 직군에서는 확실한 장점이라고 생각합니다.</a>
+                    <br>
+                    <a>또한 설명에서도 말했듯 본인 역할에 대한 책임을 강하게 느끼는 타입이라 협업에서도 꽤 도움이 될 수 있다고 생각합니다.</a>
+                    <br>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators5" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only"></span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators5" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
               </div>
             </div>
           </div>
         </div>
-        <div class="bottom-box" id="today-area">
-          <div class="clock-wheather">
-            <div class="weather">
-              <div class="today-info">
-                <div class="today-info__date"></div>
-                <div class="today-info__ampm"></div>
-              </div>
-              <div class="weather-info">
-                <div class="weather-info__city-info">
-                  <div class="weather-info__city-info__city">No weather</div>
-                  <div class="weather-info__city-info__temp">-- --</div>
-                </div>
-                <div class="weather-info__main-weather">
-                  <img src="img/weather/default.png" />
-                </div>
-              </div>
-            </div>
-            <div class="clock">
-              <div class="clock-hours">
-                <div class="clock-inner"><span id="h1"></span></div>
-                <div class="clock-inner"><span id="h2"></span></div>
-              </div>
-              <div class="clock-minutes">
-                <div class="clock-inner"><span id="m1"></span></div>
-                <div class="clock-inner"><span id="m2"></span></div>
-              </div>
-              <div class="clock-seconds">
-                <div class="clock-inner"><span id="s1"></span></div>
-                <div class="clock-inner"><span id="s2"></span></div>
-              </div>
-            </div>
-          </div>
-          <div class="quotes">
-            <div class="quote">
-              <span></span>
-            </div>
-            <div class="author"><span></span></div>
-          </div>
-        </div>
-        <form id="comment-box">
-          <!--코멘트란 작업중-->
-          <div class="bottom-box" id="today-area">
-            <form>
-              <input id="comment" type="text" placeholder="따뜻한 응원 한마디 부탁드려요~"></input>
-              <button id="postingbtn" type="button" class="btn btn-danger">보내기</button>
-            </form>
-            <div id="comment-list"></div>
-          </div>
-        </form>
       </div>
+      <div class="bottom-box" id="today-area">
+        <div class="clock-wheather">
+          <div class="weather">
+            <div class="today-info">
+              <div class="today-info__date"></div>
+              <div class="today-info__ampm"></div>
+            </div>
+            <div class="weather-info">
+              <div class="weather-info__city-info">
+                <div class="weather-info__city-info__city">No weather</div>
+                <div class="weather-info__city-info__temp">-- --</div>
+              </div>
+              <div class="weather-info__main-weather">
+                <img src="img/weather/default.png" style="margin-bottom: 30%;" />
+              </div>
+            </div>
+          </div>
+          <div class="clock">
+            <div class="clock-hours">
+              <div class="clock-inner"><span id="h1"></span></div>
+              <div class="clock-inner"><span id="h2"></span></div>
+            </div>
+            <div class="clock-minutes">
+              <div class="clock-inner"><span id="m1"></span></div>
+              <div class="clock-inner"><span id="m2"></span></div>
+            </div>
+            <div class="clock-seconds">
+              <div class="clock-inner"><span id="s1"></span></div>
+              <div class="clock-inner"><span id="s2"></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="quotes">
+          <div class="quote">
+            <span></span>
+          </div>
+          <div class="author"><span></span></div>
+        </div>
+      </div>
+      <form id="comment-box">
+        <!--코멘트란 작업중-->
+        <div class="bottom-box" id="today-area">
+          <form>
+            <input id="comment" type="text" placeholder="따뜻한 응원 한마디 부탁드려요~"></input>
+            <button id="postingbtn" type="button" class="btn btn-danger">보내기</button>
+          </form>
+          <div id="comment-list"></div>
+        </div>
+      </form>
     </div>
     <div class="main-col">
       <div class="side-box">
@@ -237,9 +596,22 @@
           <div class="calendar-date"></div>
         </div>
 
-        <div class="add-day">
-          <i class="fa-solid fa-plus"></i>
+        <div class="add-day" onclick="window.open('https://link.kakaopay.com/_/h8iAqBg')">
+          <i class="fa-solid">응애 돈줘</i>
         </div>
+        <div class ="crawling_div">
+          <div class="container1" style="font-size: medium">
+
+          </div>
+          <div class="container2" style="font-size: medium">
+
+          </div>
+          <div class="container3" style="font-size: medium">
+
+          </div>
+
+        </div>
+
 
         <form class="day-submit display-none">
           <div class="day-submit__info">
@@ -255,25 +627,26 @@
             </div>
           </div>
         </form>
-
         <div class="day-list"></div>
       </div>
     </div>
+
   </main>
 
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+  <script src="./js/crawling.js"></script>
   <script src="https://kit.fontawesome.com/7e7b57fe59.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/background.js"></script>
-  <!-- <script src="js/user-name.js"></script> -->
   <script src="js/calendar.js"></script>
-  <!-- <script src="js/d-day.js"></script> -->
   <script src="js/clock-weather.js"></script>
   <script src="js/quotes.js"></script>
-  <!-- <script src="js/todo-list.js"></script> -->
   <script src="js/commentList.js" type="module"></script>
   <script src='js/member-info.js'></script>
-  <!-- <script src="js/commentEdit.js" type="module"></script> -->
-  <script src="js/sunah-info.js"></script>
 </body>
 
 </html>

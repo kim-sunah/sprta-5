@@ -23,9 +23,6 @@ const weatherImg = [
   '50.png',
   'default.png',
 ];
-
-
-
 const clock = {
   getClock: function () {
     const now = new Date();
@@ -63,14 +60,15 @@ setInterval(() => {
 clock.setDate();
 
 function onGeoOk(position) {
-  const lat = position.coords.latitude;
-  const long = position.coords.longitude;
-  const units = 'metric';
-  const api = `https://api.openweathermap.org/data/2.5/weather?q=Seoul&units=${units}&appid=${APIKEY}&lang=kr`;
-
+  const lat=  position.coords.latitude;
+  const lon = position.coords.longitude;
+  const API_KEY ="6e0841167fd27ad036eeaba04e3ad39c";
+  const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
+ 
   fetch(api)
     .then((res) => res.json())
     .then((json) => {
+      console.log(json)
       const source = weatherImg.filter(
         (i) => i.substring(0, 2) === json.weather[0].icon.substring(0, 2)
       );
@@ -81,7 +79,7 @@ function onGeoOk(position) {
 }
 
 function onGeoError() {
-  // alert('날씨 정보를 불러올 수 없습니다.');
+  alert('날씨 정보를 불러올 수 없습니다.');
 }
 
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
