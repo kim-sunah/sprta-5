@@ -23,6 +23,21 @@ const weatherImg = [
   '50.png',
   'default.png',
 ];
+const money = document.querySelector("#money");
+
+const moneyText = [
+  '한 아이의 삶을 바꾸는 일',
+  '지금 함께해주세요',
+  '기브 me 머니',
+  '머니 돈줘',
+  'give me money',
+  '이래도 안줘?',
+  '기부금은 좋은곳에 쓰입니다',
+  '이게왜되조 기부함',
+  '입금처는 조장 지갑',
+  '감사합니다'
+]
+
 const clock = {
   getClock: function () {
     const now = new Date();
@@ -41,6 +56,7 @@ const clock = {
     m2.innerText = minutes.substring(1, 2);
     s1.innerText = seconds.substring(0, 1);
     s2.innerText = seconds.substring(1, 2);
+    money.innerText = moneyText[s2.textContent]
   },
   setDate: function () {
     const today = new Date();
@@ -60,15 +76,14 @@ setInterval(() => {
 clock.setDate();
 
 function onGeoOk(position) {
-  const lat=  position.coords.latitude;
+  const lat = position.coords.latitude;
   const lon = position.coords.longitude;
-  const API_KEY ="6e0841167fd27ad036eeaba04e3ad39c";
+  const API_KEY = "6e0841167fd27ad036eeaba04e3ad39c";
   const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
- 
+
   fetch(api)
     .then((res) => res.json())
     .then((json) => {
-      console.log(json)
       const source = weatherImg.filter(
         (i) => i.substring(0, 2) === json.weather[0].icon.substring(0, 2)
       );
