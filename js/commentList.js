@@ -60,23 +60,25 @@ async function getCommentList() {
         li.appendChild(date);
         li.innerHTML += "<br/>"
         li.appendChild(comment);
-
         if (localStorage.getItem("userName") == row['userName']) {
             const deleteButton = document.createElement("button");
             const editButton = document.createElement("button");
-            deleteButton.innerText = "delete";
-            editButton.innerText = "edit";
+            deleteButton.innerText = "삭제";
+            editButton.innerText = "수정";
             deleteButton.addEventListener("click", deleteComment);
             editButton.addEventListener("click", editComment);
+            deleteButton.style.float = "right";
+            deleteButton.style.marginRight = "1vw"
+            deleteButton.style.border = "none"
+            editButton.style.float = "right";
+            editButton.style.marginRight = "1vw"
+            editButton.style.border = "none"
             li.appendChild(deleteButton);
             li.appendChild(editButton);
         }
         commentList.appendChild(li)
     })
 }
-
-
-
 document.querySelector("#postingbtn").addEventListener("click", addComment);
 document.querySelector("#comment").addEventListener("keyup", function (event) {
     if (event.keyCode === 13) {
@@ -125,9 +127,9 @@ async function editComment(event) {
 
         li.innerHTML = ` 
         <form>
-            <input id="commentEdit" type="text" placeholder="따뜻한 응원 한마디 부탁드려요~"value = "${changeText.childNodes[2].textContent}" ></input>
-            <button id="cancelButton" type="button" class="btn btn-danger">취소</button>
-            <button id="editButton" type="button" class="btn btn-danger">수정</button>
+            <input id="commentEdit" type="text" placeholder="따뜻한 응원 한마디 부탁드려요~"value = "${changeText.childNodes[2].textContent}" style = "width:80%;"></input>
+            <button id="cancelButton" type="button" style="float: right; margin-right: 1vw; border: medium;">취소</button>
+            <button id="editButton" type="button" style="float: right; margin-right: 1vw; border: medium;">수정</button>
         </form>`
         // $("#cancelButton").addEventListener('click', getCommentList);
         document.getElementById("editButton").addEventListener("click",
@@ -141,59 +143,16 @@ async function editComment(event) {
                 commentList.innerHTML = ""
                 getCommentList()
             })
+        document.getElementById("cancelButton").addEventListener("click",
+            function cancelButton() {
+                commentList.innerHTML = ""
+                getCommentList()
+            })
+
 
     } else {
         alert('올바르지 못한 비밀번호 입니다!');
     }
-
-
-    // if (confirmPw == docSnap.data()['password']) {
-    //     main.innerHTML = ""
-    //     main.innerHTML = `        
-    //     <div class="main-col">
-    //     <div class="reset">
-    //         <div class="reset__col">
-    //             <span>Wanna reset?</span>
-    //         </div>
-    //         <div class="reset__col">
-    //             <span><i class="fa-solid fa-arrow-rotate-right"></i></span>
-    //         </div>
-    //     </div>
-    //     <div class="comment-box">
-    //         <form id="comment_input">
-    //             <h2>[방명록] 칭찬해주세요</h2>
-    //             <div>
-    //                 <label for="floatingInput">제목</label>
-    //                 <input id="commentTitle" type="text" placeholder="제목을 입력해주세요"></input>
-    //             </div>
-    //             <div class="form-floating mb-3">
-    //                 <label for="floatingInput">추천 이유</label>
-    //                 <textarea class="form-control" id="comment" placeholder="추천 이유"></textarea>
-    //             </div>
-    //         </form>
-    //         <button id="postingbtn" type="button" class="btn btn-danger">수정하기</button>
-    //     </div>
-    //     </div>`
-    //     const docSnapData = docSnap.data();
-    //     const postingbtn = document.querySelector("#postingbtn");
-    //     postingbtn.addEventListener("click", editCommentbtn);
-    //     document.querySelector("#commentTitle").value = docSnapData["commentTitle"];
-    //     document.querySelector("#comment").value = docSnapData["comment"];
-
-    //     async function editCommentbtn(event) {
-    //         let commentTitle = document.querySelector("#commentTitle").value
-    //         let comment = document.querySelector("#comment").value
-    //         await updateDoc(doc(db, "comment", li.id), {
-    //             'commentTitle': commentTitle,
-    //             'comment': comment,
-    //         });
-    //         alert('수정 완료!');
-    //         location.href = 'index.html';
-    //     }
-    // } else {
-    //     alert('올바르지 못한 비밀번호 입니다!');
-    // }
-
 }
 async function deleteComment(event) {
 

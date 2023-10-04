@@ -6,6 +6,9 @@ $(document).ready(function () {
   const $mainBoxTodolist = $(".main-box__todolist");
   const $memberCard = $(".membercard");
   const $calendar = $(".calendar");
+  const $cardContainer = $(".card-container");
+  const $introduction = $(".Introduction");
+  const $crawling = $(".crawling_div");
 
   // 페이지 로드 시 기본적으로 숨기기
   $welcome.show();
@@ -15,6 +18,8 @@ $(document).ready(function () {
   $teamInfoBox.hide();
   $("#comment-box").hide();
   $memberCard.hide();
+  $introduction.hide();
+  $crawling.hide();
 
   // 5초 뒤에 welcome 문구 사라지게 만듦
   setTimeout(function () {
@@ -36,6 +41,8 @@ $(document).ready(function () {
     $("#today-area").hide();
     // 팀 정보 박스 보여주기
     $teamInfoBox.show();
+    $introduction.show();
+    $cardContainer.hide();
   });
 
   // 멤버 요소 컨트롤
@@ -74,6 +81,8 @@ $(document).ready(function () {
     $(`${memberId}-info`).show();
     // 달력 숨김
     $calendar.hide();
+    $cardContainer.hide();
+    $crawling.show();
   });
 
   // 리셋 누를 시 초기화면으로 되돌림
@@ -90,5 +99,8 @@ $(document).ready(function () {
     $("#today-area").show();
     $memberCard.hide();
     $calendar.show();
+    $cardContainer.show();
+    $introduction.hide();
+    $crawling.hide();
   });
 });

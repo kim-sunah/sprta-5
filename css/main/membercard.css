@@ -49,4 +49,20 @@
 
 }
 
+.member:hover {
+  animation: slide-up-fade-in 0.3s ease-out forwards;
+
+}
+@keyframes slide-up-fade-in {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(-30px);
+    opacity: 1;
+  }
+  
+}
+
 

@@ -1,0 +1,15 @@
+ .crawling_div{
+  font-size: 1px;
+ }
+ .container1, .container2, .container3 {
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8vmax;
+    border-radius: 11px;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease-in-out;
+    word-break: break-all;
+  }  
