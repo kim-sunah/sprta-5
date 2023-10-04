@@ -26,16 +26,16 @@ const weatherImg = [
 const money = document.querySelector("#money");
 
 const moneyText = [
-  '한 아이의 삶을 바꾸는 일',
+  '한 아이의 삶을',
+  '바꾸는 일',
   '지금 함께해주세요',
   '기브 me 머니',
   '머니 돈줘',
   'give me money',
   '이래도 안줘?',
-  '기부금은 좋은곳에 쓰입니다',
+  '좋은곳에 쓸 기부금',
   '이게왜되조 기부함',
-  '입금처는 조장 지갑',
-  '감사합니다'
+  '입금처는 조장 지갑'
 ]
 
 const clock = {

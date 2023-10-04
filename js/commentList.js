@@ -20,9 +20,13 @@ const firebaseConfig = {
 // Firebase 인스턴스 초기화
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-const commentList = document.querySelector("#comment-list");
-const main = document.querySelector("main");
 
+const $container = {
+    commentList: $("#comment-list"),
+    postingbtn: $("#postingbtn"),
+    comment: $("comment"),
+    commentBox: $('#comment-box'),
+};
 
 var today = new Date();
 var year = today.getFullYear();
@@ -32,14 +36,15 @@ var hours = ('0' + today.getHours()).slice(-2);
 var minutes = ('0' + today.getMinutes()).slice(-2);
 var seconds = ('0' + today.getSeconds()).slice(-2);
 
-// const q = query(
-//     collection(db, 'comment'),
-//     orderBy('date', 'desc')
-// );
-// let docs = await await getDocs(q);
 
 var dateString = year + '-' + month + '-' + day + " " + hours + ':' + minutes + ':' + seconds;;
 //리스트 출력
+
+$container.postingbtn.on("click", addComment);
+$container.commentBox.on("submit", (event) => {
+    event.preventDefault();
+})
+
 async function getCommentList() {
     const q = query(
         collection(db, 'comment'),
@@ -47,39 +52,27 @@ async function getCommentList() {
     );
     let docs = await await getDocs(q);
 
-    commentList.innerHTML = ""
+    $container.commentList.html("")
     docs.forEach((doc) => {
         let row = doc.data();
-        const li = document.createElement("li");
-        li.innerHTML = `<a>${row['date']}</a>
-        </br>
-        <a>${row['comment']}</a>
-        </br>`
-        li.id = doc.id;
-        if (localStorage.getItem("userName") == row['userName']) {
+        $container.commentList.append(
+            `<li id = ${doc.id}>
+                <a>${row['date']}</a>
+                  </br>
+                 <a>${row['comment']}</a>
+                </li>
+            `)
             
-            const deleteButton = document.createElement("button");
-            const editButton = document.createElement("button");
-            deleteButton.innerText = "삭제";
-            editButton.innerText = "수정";
-            deleteButton.addEventListener("click", deleteComment);
-            editButton.addEventListener("click", editComment);
-            li.appendChild(deleteButton);
-            li.appendChild(editButton);
+        if (localStorage.getItem("userName") == row['userName']) {
+            $("#"+doc.id).append(`<button id = "deleteBtn">삭제</button>
+            <button id="editBtn">수정</button>`);
         }
-        commentList.appendChild(li)
     })
+    $("#deleteBtn").on('click', deleteComment);
+    $("#editBtn").on('click', editComment);
 }
-document.querySelector("#postingbtn").addEventListener("click", addComment);
-document.querySelector("#comment").addEventListener("keyup", function (event) {
-    if (event.keyCode === 13) {
-        event.preventDefault();
-        document.getElementById("postingbtn").click();
-    }
-});
 
 async function addComment() {
-    let comment = $('#comment').val();
     let name = localStorage.getItem('userName')
     if (name == undefined) {
         name = prompt("성함을 알려주세요~");
@@ -90,55 +83,47 @@ async function addComment() {
         let doc = {
             'id': today,
             'userName': localStorage.getItem('userName'),
-            'comment': comment,
+            'comment': $('#comment').val(),
             'password': password,
             'date': dateString,
         }
         await addDoc(collection(db, "comment"), doc);
         alert('저장 완료!');
         $("#comment").val("");
-        commentList.innerHTML = ""
+        $container.commentList.html("");
         getCommentList()
     }
 }
 
-document.querySelector('#comment-box').addEventListener("submit", (event) => {
-    event.preventDefault();
-})
+
 
 async function editComment(event) {
     let confirmPw = prompt("게시글의 수정을 위해 비밀번호를 입력해주세요");
     const li = event.target.parentElement;
     const docSnap = await getDoc(doc(db, "comment", li.id));
+
     if (confirmPw == docSnap.data()['password']) {
 
-
-        let changeText = document.getElementById(li.id);
-        console.log(changeText.childNodes[2].textContent);
+        let change = $("#" + li.id)
 
         li.innerHTML = ` 
         <form>
-            <input id="commentEdit" type="text" placeholder="따뜻한 응원 한마디 부탁드려요~"value = "${changeText.childNodes[2].textContent}" style = "width:80%;"></input>
+            <input id="commentEdit" type="text" placeholder="따뜻한 응원 한마디 부탁드려요~"value = "${change.find(`a:eq(1)`).text()}" style = "width:80%;"></input>
             <button id="cancelButton" type="button" style="float: right; margin-right: 1vw; border: medium;">취소</button>
             <button id="editButton" type="button" style="float: right; margin-right: 1vw; border: medium;">수정</button>
         </form>`
-        document.getElementById("editButton").addEventListener("click",
+        $("#editButton").on("click",
             async function editCommentbtn(event) {
-                var comment = document.getElementById("commentEdit").value;
-                console.log(comment)
                 await updateDoc(doc(db, "comment", li.id), {
-                    'comment': comment,
+                    'comment': $("#commentEdit").val(),
                 });
                 alert('수정 완료!');
-                commentList.innerHTML = ""
                 getCommentList()
             })
-        document.getElementById("cancelButton").addEventListener("click",
+        $("#cancelButton").on("click",
             function cancelButton() {
-                commentList.innerHTML = ""
                 getCommentList()
             })
-
 
     } else {
         alert('올바르지 못한 비밀번호 입니다!');
@@ -147,7 +132,6 @@ async function editComment(event) {
 async function deleteComment(event) {
 
     const li = event.target.parentElement;
-    console.log(li)
     const docSnap = await getDoc(doc(db, "comment", li.id));
     let confirmPw = prompt("게시글의 삭제를 위해 비밀번호를 입력해주세요");
     if (confirmPw == docSnap.data()['password']) {
