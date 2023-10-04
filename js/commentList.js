@@ -50,29 +50,20 @@ async function getCommentList() {
     commentList.innerHTML = ""
     docs.forEach((doc) => {
         let row = doc.data();
-
         const li = document.createElement("li");
-        const comment = document.createElement("a");
-        const date = document.createElement("a");
+        li.innerHTML = `<a>${row['date']}</a>
+        </br>
+        <a>${row['comment']}</a>
+        </br>`
         li.id = doc.id;
-        comment.innerText = row['comment'];
-        date.innerText = row['date'];
-        li.appendChild(date);
-        li.innerHTML += "<br/>"
-        li.appendChild(comment);
         if (localStorage.getItem("userName") == row['userName']) {
+            
             const deleteButton = document.createElement("button");
             const editButton = document.createElement("button");
             deleteButton.innerText = "삭제";
             editButton.innerText = "수정";
             deleteButton.addEventListener("click", deleteComment);
             editButton.addEventListener("click", editComment);
-            deleteButton.style.float = "right";
-            deleteButton.style.marginRight = "1vw"
-            deleteButton.style.border = "none"
-            editButton.style.float = "right";
-            editButton.style.marginRight = "1vw"
-            editButton.style.border = "none"
             li.appendChild(deleteButton);
             li.appendChild(editButton);
         }
@@ -131,7 +122,6 @@ async function editComment(event) {
             <button id="cancelButton" type="button" style="float: right; margin-right: 1vw; border: medium;">취소</button>
             <button id="editButton" type="button" style="float: right; margin-right: 1vw; border: medium;">수정</button>
         </form>`
-        // $("#cancelButton").addEventListener('click', getCommentList);
         document.getElementById("editButton").addEventListener("click",
             async function editCommentbtn(event) {
                 var comment = document.getElementById("commentEdit").value;
