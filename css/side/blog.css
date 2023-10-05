@@ -4,7 +4,9 @@
 
  .container1,
  .container2,
- .container3 {
+ .container3,
+ .container4,
+ .container5 {
    background-color: rgba(255, 200, 200, 0.6);
    border-radius: 70px;
    box-shadow: var(--btn-shadow);
