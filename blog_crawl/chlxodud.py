@@ -1,4 +1,43 @@
-{
+#데이터 크롤링
+import requests
+from bs4 import BeautifulSoup
+
+response = requests.get("https://chlxodud.tistory.com")
+html = response.text
+soup = BeautifulSoup(html, "html.parser")
+
+titles = soup.select('.txt_title')
+blog_title = []
+for title in titles:
+  blog_title.append(title.text.strip())
+
+summation = soup.select('.cont_thumb .txt_thumb')
+blog_summary = []
+for summary in summation:
+  blog_summary.append(summary.text.strip())
+
+dates = soup.select('.thumb_info .date')
+blog_date = []
+for date in dates:
+  blog_date.append(date.text)
+
+articles = soup.select('.inner_content .link_thumb')
+blog_article = []
+for article in articles:
+  blog_article.append("https://chlxodud.tistory.com" + article['href'])
+
+# i=0
+# while i < 5:
+#   print(blog_title[i], blog_summary[i], blog_date[i], blog_article[i])
+#   i = i+1
+
+#파이어베이스에 데이터 저장
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import db
+
+#Firebase database 인증 및 앱 초기화
+cred = credentials.Certificate({
   "type": "service_account",
   "project_id": "sparta5-65934",
   "private_key_id": "68caeb2e49540727187247d30aeb9dbfa3bb1bc0",
@@ -10,4 +49,24 @@
   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
   "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-9qbjz%40sparta5-65934.iam.gserviceaccount.com",
   "universe_domain": "googleapis.com"
-}
+})
+firebase_admin.initialize_app(cred,{
+    'databaseURL' : 'https://sparta5-65934-default-rtdb.firebaseio.com/'
+})
+
+def putdata():
+
+  ref = db.reference('태영/1')
+  ref.update({'제목':blog_title[0]})
+  ref.update({'내용':blog_summary[0]})
+  ref.update({'날짜':blog_date[0]})
+  ref.update({'링크':blog_article[0]})
+
+  ref = db.reference('태영/2')
+  ref.update({'제목':blog_title[1]})
+  ref.update({'내용':blog_summary[1]})
+  ref.update({'날짜':blog_date[1]})
+  ref.update({'링크':blog_article[1]})
+
+
+putdata()
