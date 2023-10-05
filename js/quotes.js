@@ -83,17 +83,14 @@ const quotes = [
   },
 ];
 
-const quoteComp = document.querySelector('.quote span');
-const authorComp = document.querySelector('.author span');
-
 const quotesInit = {
   makeRandomNum: function () {
     quotesInit.randomNum = Math.floor(Math.random() * 20);
   },
   randomNum: 0,
   setQuote: function () {
-    quoteComp.innerText = quotes[quotesInit.randomNum].quote;
-    authorComp.innerText = '-' + quotes[quotesInit.randomNum].author;
+    $('.quote span').text(quotes[quotesInit.randomNum].quote)
+    $('.author span').text('-' + quotes[quotesInit.randomNum].author)
   },
 };
 
