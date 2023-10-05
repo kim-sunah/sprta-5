@@ -7,7 +7,7 @@ const imgArray = [
   '4.jpg',
   
   
-  '7.jpg',
+  
 ];
 
 function makeRandomImg() {
