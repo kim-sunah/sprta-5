@@ -25,9 +25,13 @@ function fetchData(name, i) {
     lastIndex = contents.indexOf(".") + 1;
     $(`.container${i}`).html(`
       제목 : ${title}<br>
-      내용 : ${contents.slice(0, lastIndex)} <br>
-      날짜 : ${date}<br>
-      링크 : ${links}
+      날짜 : ${date}
     `);
+    $(`.container${i}`).on('click',function(){
+      window.open(`${links}`)
+    })
   });
 }
+
+
+//<a href='${links}' type='_blank'></a>
