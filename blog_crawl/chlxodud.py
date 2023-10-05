@@ -11,11 +11,6 @@ blog_title = []
 for title in titles:
   blog_title.append(title.text.strip())
 
-summation = soup.select('.cont_thumb .txt_thumb')
-blog_summary = []
-for summary in summation:
-  blog_summary.append(summary.text.strip())
-
 dates = soup.select('.thumb_info .date')
 blog_date = []
 for date in dates:
@@ -26,10 +21,9 @@ blog_article = []
 for article in articles:
   blog_article.append("https://chlxodud.tistory.com" + article['href'])
 
-# i=0
-# while i < 5:
-#   print(blog_title[i], blog_summary[i], blog_date[i], blog_article[i])
-#   i = i+1
+
+
+
 
 #파이어베이스에 데이터 저장
 import firebase_admin
@@ -54,19 +48,8 @@ firebase_admin.initialize_app(cred,{
     'databaseURL' : 'https://sparta5-65934-default-rtdb.firebaseio.com/'
 })
 
-def putdata():
-
-  ref = db.reference('태영/1')
-  ref.update({'제목':blog_title[0]})
-  ref.update({'내용':blog_summary[0]})
-  ref.update({'날짜':blog_date[0]})
-  ref.update({'링크':blog_article[0]})
-
-  ref = db.reference('태영/2')
-  ref.update({'제목':blog_title[1]})
-  ref.update({'내용':blog_summary[1]})
-  ref.update({'날짜':blog_date[1]})
-  ref.update({'링크':blog_article[1]})
-
-
-putdata()
+for i in range(1,4):
+  ref = db.reference(f'member3/{i}')
+  ref.update({'제목':blog_title[i-1]})
+  ref.update({'날짜':blog_date[i-1]})
+  ref.update({'링크':blog_article[i-1]})

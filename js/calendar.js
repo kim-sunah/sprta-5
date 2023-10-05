@@ -1,6 +1,3 @@
-const prevMonth = document.querySelector(".calendar-yearmonth div:nth-child(1)");
-const nextMonth = document.querySelector(".calendar-yearmonth div:nth-child(3)");
-
 const init = {
   monthArr: [
     'January',
@@ -19,12 +16,9 @@ const init = {
   date: new Date(),
   today: new Date(),
   setYearMonth: function (selectedDate) {
-    const yearMonth = document.querySelector('.calendar-yearmonth__col');
-
     const year = selectedDate.getFullYear();
     const month = selectedDate.getMonth();
-
-    yearMonth.innerText = `${init.monthArr[month]}, ${year}`;
+    $('.calendar-yearmonth__col').text(`${init.monthArr[month]}, ${year}`)
   },
   setDates: function (selectedDate) {
 
@@ -71,7 +65,7 @@ const init = {
       innerHtml = innerHtml + "</div>";
     }
 
-    document.querySelector(".calendar-date").innerHTML = innerHtml;
+    $(".calendar-date").html(innerHtml);
   },
   drawCalendar: function() {
     const date = init.date;
@@ -89,11 +83,11 @@ const init = {
 
     if(day > 7) {day = day-7;}
     
-    const today = document.querySelector(`.calendar-date>div:nth-child(${week})>div:nth-child(${day})`)
+    const today = $(`.calendar-date>div:nth-child(${week})>div:nth-child(${day})`)
     return today;
   },
   addClassToday : function(today) {
-    today.classList.add("calendar-date__today");
+    today.addClass("calendar-date__today")
   },
 };
 
@@ -113,7 +107,7 @@ function nextMonthDraw() {
   init.drawCalendar();  
 }
 
-prevMonth.addEventListener("click", prevMonthDraw);
-nextMonth.addEventListener("click", nextMonthDraw);
+$(".calendar-yearmonth div:nth-child(1)").on("click", prevMonthDraw);
+$(".calendar-yearmonth div:nth-child(3)").on("click", nextMonthDraw);
 
 init.drawCalendar();

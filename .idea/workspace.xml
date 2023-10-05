@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="511a4126-30d7-4af0-b129-1b7aeb1cf7e2" name="변경" comment="지원님 병합">
-      <change beforePath="$PROJECT_DIR$/css/bottom/clock-weather.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/bottom/clock-weather.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/bottom/quotes.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/bottom/quotes.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/crawling.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/crawling.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/crawling2.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/crawling2.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,9 +47,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2W8vaxSGYzwzGD7HydL62HY5KRs" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
@@ -68,7 +63,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "태영",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
