@@ -11,11 +11,6 @@ blog_title = []
 for title in titles:
   blog_title.append(title.text.strip())
 
-summation = soup.select('.summary')
-blog_summary = []
-for summary in summation:
-  blog_summary.append(summary.text.strip())
-
 dates = soup.select('.date')
 blog_date = []
 for date in dates:
@@ -50,9 +45,8 @@ firebase_admin.initialize_app(cred,{
     'databaseURL' : 'https://sparta5-65934-default-rtdb.firebaseio.com/'
 })
 
-for i in range(1,4):
+for i in range(1,6):
   ref = db.reference(f'member1/{i}')
   ref.update({'제목':blog_title[i-1]})
-  ref.update({'내용':blog_summary[i-1]})
   ref.update({'날짜':blog_date[i-1]})
   ref.update({'링크':blog_article[i-1]})
