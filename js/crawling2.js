@@ -23,7 +23,7 @@ function fetchData(name, i) {
       제목: title,
     } = data;
     lastIndex = contents.indexOf(".") + 1;
-    $(`.${container}${i}`).html(`
+    $(`.container${i}`).html(`
       제목 : ${title}<br>
       내용 : ${contents.slice(0, lastIndex)} <br>
       날짜 : ${date}<br>
@@ -31,5 +31,3 @@ function fetchData(name, i) {
     `);
   });
 }
-
-export { fetchData };
