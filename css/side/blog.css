@@ -1,70 +1,89 @@
- .crawling_div{
-  font-size: 1px;
+ .crawling_div {
+   font-size: 1px;
  }
 
- .container1, .container2, .container3 {
-    width: 100%;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.8vmax;
-    border-radius: 11px;
-    cursor: pointer;
-    transition: box-shadow 0.2s ease-in-out;
-    word-break: break-all;
-  }  
+ .container1,
+ .container2,
+ .container3 {
+   background-color: rgba(255, 200, 200, 0.6);
+   border-radius: 70px;
+   box-shadow: var(--btn-shadow);
+   width: 100%;
+   font-family: 'Skranji', cursive;
+   font-family: 'Sunflower', sans-serif;
+   display: flex;
+   align-items: center;
+   justify-content: left;
+   font-size: 1.8vmax;
+   border-radius: 11px;
+   cursor: pointer;
+   transition: box-shadow 0.2s ease-in-out;
+   word-break: break-all;
+   padding: 10px;
+   margin-top: 8px;
+   margin-bottom: 5px;
+ }
 
-  .fa {  
-    padding: 20px;  
-  text-align: center;  
-    margin: 5px 2px;  
-    font-size: 30px;  
-    width: 70px;  
-  }  
-  .fa-facebook {  
-    background: #3B5998;  
-    color: white;  
-  }  
-  .fa-twitter {  
-    background: #55ACEE;  
-    color: white;  
-  }  
-  .fa-pinterest {  
-    background: #cb2027;  
-    color: white;  
-  }  
-  .fa-linkedin {  
-    background: #007bb5;  
-    color: white;  
-  }  
-  .fa-instagram {  
-    background: #125688;  
-    color: white;  
-  }  
-  .fa-youtube {  
-    background: #bb0000;  
-    color: white;  
-  }  
-  .fa-google {  
-    background: #dd4b39;  
-    color: white;  
-  }  
-  .fa-snapchat-ghost {  
-    background: #fffc00;  
-    color: white;  
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;  
-  }  
-  .fa-skype {  
-    background: #00aff0;  
-    color: white;  
-  }  
-  .fa:hover {  
-      opacity: 0.9;  
-  }  
+ .fa {
+   padding: 20px;
+   text-align: center;
+   margin: 5px 2px;
+   font-size: 30px;
+   width: 70px;
+ }
 
-  #grid_social_btn {
-    display : grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding-left : 50px;
-  }
+ .fa-facebook {
+   background: #3B5998;
+   color: white;
+ }
+
+ .fa-twitter {
+   background: #55ACEE;
+   color: white;
+ }
+
+ .fa-pinterest {
+   background: #cb2027;
+   color: white;
+ }
+
+ .fa-linkedin {
+   background: #007bb5;
+   color: white;
+ }
+
+ .fa-instagram {
+   background: #125688;
+   color: white;
+ }
+
+ .fa-youtube {
+   background: #bb0000;
+   color: white;
+ }
+
+ .fa-google {
+   background: #dd4b39;
+   color: white;
+ }
+
+ .fa-snapchat-ghost {
+   background: #fffc00;
+   color: white;
+   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+ }
+
+ .fa-skype {
+   background: #00aff0;
+   color: white;
+ }
+
+ .fa:hover {
+   opacity: 0.9;
+ }
+
+ #grid_social_btn {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   padding-left: 50px;
+ }

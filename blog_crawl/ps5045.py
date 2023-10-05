@@ -45,7 +45,7 @@ firebase_admin.initialize_app(cred,{
 })
 
 
-for i in range(1,4):
+for i in range(1,6):
   ref = db.reference(f'member5/{i}')
   ref.update({'제목':blog_title[i-1]})
   ref.update({'날짜':blog_date[i-1]})

@@ -48,7 +48,7 @@ firebase_admin.initialize_app(cred,{
     'databaseURL' : 'https://sparta5-65934-default-rtdb.firebaseio.com/'
 })
 
-for i in range(1,3):
+for i in range(1,4):
   ref = db.reference(f'member3/{i}')
   ref.update({'제목':blog_title[i-1]})
   ref.update({'날짜':blog_date[i-1]})
