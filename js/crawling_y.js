@@ -19,12 +19,13 @@ $(document).ready(function () {
   $(".member").on("click", function(){
 
     // 클릭한 멤버의 href 속성 값 가져오기
-    const memberBlogId = $(this).attr("href");
+    const memberBlogId = $(this).attr("class");
     for (let i = 1; i <= 3; i++) {
       database.ref(`${memberBlogId}/${i}`).on("value", snapshot => {
         const data = snapshot.val();
         const { 날짜: date, 내용: contents, 링크: links, 제목: title } = data;
         lastIndex = contents.indexOf('.') + 1;
+
         document.querySelector(`.container${i}`).innerHTML =
           `제목 : ${title}<br>
           내용 : ${contents.slice(0, lastIndex)} <br>
