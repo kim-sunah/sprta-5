@@ -25,9 +25,10 @@ function fetchData(name, i) {
       제목 : ${title}<br>
       날짜 : ${date}
     `);
-    $(`.container${i}`).on('click',function(){
-      window.open(`${links}`)
-    })
+    $(`.container${i}`).contents().wrap(`<a href='${links}'></a>`);
+    // $(`.container${i}`).on('click',function(){
+    //   window.open(`${links}`)
+    // })
   });
 }
 

@@ -140,7 +140,7 @@ $(document).ready(function () {
     $elements.crawlingDivs.show();
     $elements.backButtonElement.show();
 
-    [1, 2, 3].forEach((i) => {
+    [1, 2, 3, 4, 5].forEach((i) => {
       fetchData(memberId, i);
     });
   }
