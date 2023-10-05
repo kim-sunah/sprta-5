@@ -26,11 +26,6 @@ blog_article = []
 for article in articles:
   blog_article.append("https://ps5045.tistory.com" + article['href'])
 
-# i=0
-# while i < 5:
-#   print(blog_title[i], blog_summary[i], blog_date[i], blog_article[i])
-#   i = i+1
-
 #파이어베이스에 데이터 저장
 import firebase_admin
 from firebase_admin import credentials
@@ -54,36 +49,11 @@ firebase_admin.initialize_app(cred,{
     'databaseURL' : 'https://sparta5-65934-default-rtdb.firebaseio.com/'
 })
 
-def putdata():
 
-  ref = db.reference('유덕/1')
-  ref.update({'제목':blog_title[0]})
-  ref.update({'내용':blog_summary[0]})
-  ref.update({'날짜':blog_date[0]})
-  ref.update({'링크':blog_article[0]})
+for i in range(1,4):
+  ref = db.reference(f'member5/{i}')
+  ref.update({'제목':blog_title[i-1]})
+  ref.update({'내용':blog_summary[i-1]})
+  ref.update({'날짜':blog_date[i-1]})
+  ref.update({'링크':blog_article[i-1]})
 
-  ref = db.reference('유덕/2')
-  ref.update({'제목':blog_title[1]})
-  ref.update({'내용':blog_summary[1]})
-  ref.update({'날짜':blog_date[1]})
-  ref.update({'링크':blog_article[1]})
-
-  ref = db.reference('유덕/3')
-  ref.update({'제목':blog_title[2]})
-  ref.update({'내용':blog_summary[2]})
-  ref.update({'날짜':blog_date[2]})
-  ref.update({'링크':blog_article[2]})
-
-  ref = db.reference('유덕/4')
-  ref.update({'제목':blog_title[3]})
-  ref.update({'내용':blog_summary[3]})
-  ref.update({'날짜':blog_date[3]})
-  ref.update({'링크':blog_article[3]})
-
-  ref = db.reference('유덕/5')
-  ref.update({'제목':blog_title[4]})
-  ref.update({'내용':blog_summary[4]})
-  ref.update({'날짜':blog_date[4]})
-  ref.update({'링크':blog_article[4]})
-
-putdata()

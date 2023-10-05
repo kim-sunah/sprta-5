@@ -12,6 +12,7 @@ $(document).ready(function () {
     introduction: $(".Introduction"),
     crwalingDiv: $(".crawling_div"),
     teamName: $(".team-name"),
+    backButton: $(".back"),
   };
 
   const $memberInfoController = {
@@ -84,6 +85,8 @@ $(document).ready(function () {
 
     // 클릭한 멤버의 href 속성 값 가져오기
     const memberId = $(this).attr("href");
+    // # 문자 인코딩
+    const memberIdWithoutHash = memberId.replace("#", "");
     // 모든 멤버 정보 박스 숨기기
     $container.membersInfoContainer.hide();
     // 해당하는 멤버 정보 박스 보이게 함
@@ -93,6 +96,27 @@ $(document).ready(function () {
     $container.cardContainer.hide();
     // 크롤링 띄우기
     $container.crwalingDiv.show();
+    $container.backButton.show();
+
+    [1, 2, 3].forEach((i) => {
+      fetchData(memberIdWithoutHash, i);
+    });
+  });
+
+  // 뒤로가기 버튼 클릭 이벤트
+  $container.backButton.on("click", function (e) {
+    e.preventDefault();
+    // 모든 요소 숨기고 멤버 버튼만 보여주기
+    etcElements.forEach((value) => $(value).hide());
+
+    // 멤버 정보 박스 숨김
+    $container.membersInfoContainer.hide();
+
+    // 원래의 members와 memberCard 다시 보여줌
+    $container.cardContainer.show();
+    $container.memberCard.show();
+    $(".member").show();
+    $container.backButton.hide();
   });
 
   // 리셋 누를 시 초기화면으로 되돌림
