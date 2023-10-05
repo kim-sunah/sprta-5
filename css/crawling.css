@@ -13,3 +13,18 @@
 .carousel-item li{
     list-style: none;
 }
+.social_btn img:nth-child(1) {
+    height: 3rem;
+    position:absolute;
+    right: 55%;
+    object-fit:cover;
+}
+.social_btn img:nth-child(2) {
+    height: 3rem;
+    position:absolute;
+    left: 55%;
+    object-fit:cover;
+}
+.social_btn {
+border: 10rem;
+}

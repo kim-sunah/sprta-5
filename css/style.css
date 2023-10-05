@@ -22,7 +22,7 @@
 /* side-box */
 @import './side/calendar.css';
 @import './side/d-day.css';
-@import "./side/blog.css";
+/* @import "./side/blog.css"; */
 
 /* bottom-box */
 @import './bottom/clock-weather.css';
