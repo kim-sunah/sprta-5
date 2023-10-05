@@ -32,6 +32,9 @@
 /* comment */
 @import './comment/comment-area.css';
 
+/* crawling */
+@import './crawling.css';
+
 body {
   font-family: 'PT Sans', sans-serif;
   padding: 0 10vw;
