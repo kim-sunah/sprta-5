@@ -25,12 +25,9 @@ function fetchData(name, i) {
       제목 : ${title}<br>
       날짜 : ${date}
     `);
-    $(`.container${i}`).contents().wrap(`<a href='${links}'></a>`);
-    // $(`.container${i}`).on('click',function(){
-    //   window.open(`${links}`)
-    // })
+    $(`.container${i}`).wrap(`<div class = "memberContainer${i}"></div>`);
+    $(`.memberContainer${i}`).click(function(){
+		$(location).attr("href", `${links}`)
+	});
   });
 }
-
-
-//<a href='${links}' type='_blank'></a>

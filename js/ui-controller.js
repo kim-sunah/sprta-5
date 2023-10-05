@@ -130,7 +130,6 @@ $(document).ready(function () {
     e.preventDefault();
 
     const memberId = $(this).attr("id");
-    console.log(memberId);
 
     $elements.membersInfoContainer.hide();
     $(".calendar").hide();
