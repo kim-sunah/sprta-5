@@ -84,6 +84,8 @@ $(document).ready(function () {
 
     // 클릭한 멤버의 href 속성 값 가져오기
     const memberId = $(this).attr("href");
+    // # 문자 인코딩
+    const memberIdWithoutHash = memberId.replace("#", "");
     // 모든 멤버 정보 박스 숨기기
     $container.membersInfoContainer.hide();
     // 해당하는 멤버 정보 박스 보이게 함
@@ -93,6 +95,10 @@ $(document).ready(function () {
     $container.cardContainer.hide();
     // 크롤링 띄우기
     $container.crwalingDiv.show();
+
+    [1, 2, 3].forEach((i) => {
+      fetchData(memberIdWithoutHash, i);
+    });
   });
 
   // 리셋 누를 시 초기화면으로 되돌림
