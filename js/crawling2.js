@@ -18,20 +18,16 @@ function fetchData(name, i) {
     const data = snapshot.val();
     const {
       날짜: date,
-      내용: contents,
       링크: links,
       제목: title,
     } = data;
-    lastIndex = contents.indexOf(".") + 1;
     $(`.container${i}`).html(`
       제목 : ${title}<br>
       날짜 : ${date}
     `);
-    $(`.container${i}`).on('click',function(){
-      window.open(`${links}`)
-    })
+    $(`.container${i}`).wrap(`<div class = "memberContainer${i}"></div>`);
+    $(`.memberContainer${i}`).click(function(){
+		$(location).attr("href", `${links}`)
+	});
   });
 }
-
-
-//<a href='${links}' type='_blank'></a>

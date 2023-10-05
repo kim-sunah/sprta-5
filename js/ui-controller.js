@@ -130,7 +130,6 @@ $(document).ready(function () {
     e.preventDefault();
 
     const memberId = $(this).attr("id");
-    console.log(memberId);
 
     $elements.membersInfoContainer.hide();
     $(".calendar").hide();
@@ -140,7 +139,7 @@ $(document).ready(function () {
     $elements.crawlingDivs.show();
     $elements.backButtonElement.show();
 
-    [1, 2, 3].forEach((i) => {
+    [1, 2, 3, 4, 5].forEach((i) => {
       fetchData(memberId, i);
     });
   }
