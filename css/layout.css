@@ -11,7 +11,9 @@ main {
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 70px;
   box-shadow: var(--btn-shadow);
+  height: 100%;
 }
+
 
 .main-box {
   width: 55vw;
@@ -54,13 +56,14 @@ main {
   font-size: 1vmax;
   justify-content: end;
   width: 100%;
+  
 }
 
 .reset__col {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 10px;
+ 
 }
 #comment-list{
   margin-left: 4%;

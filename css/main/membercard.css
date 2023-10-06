@@ -61,6 +61,7 @@
   font-family: 'Fira Sans Extra Condensed', sans-serif;
   font-weight: bold;
 
+
 }
 
 .member:hover {
@@ -99,6 +100,13 @@
   width: 100%;
   height: 100%;
 }
+
+.member_h{
+  font-family: 'Gamja Flower';  
+  font-size: 2vmax;
+  margin-top: 10%;
+}
+
 
 
 
