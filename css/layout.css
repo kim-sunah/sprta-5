@@ -83,4 +83,6 @@ button:hover{
 }
 .carousel-item_div div{
   width: 80%;
+  margin: 0 auto;
+margin-bottom: 1rem;
 }
