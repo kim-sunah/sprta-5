@@ -4,9 +4,23 @@
   /* padding-left: 32.5rem; */
   width: 100%;
   
-  
+}
+.member_active{
+  font-size: 1vmax;
+}
+.member_active_title{
+  font-size: 1.5vmax;
+}
+
+.membercard_header{
+  text-align: center; 
+  height: 100%; 
+  justify-content: center;
+   align-items: center;
 
 }
+
+
 .card {
   /* 다른 스타일 유지 */
   margin: 0; /* 각 카드 사이에 간격을 설정합니다. */
