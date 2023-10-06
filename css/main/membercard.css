@@ -63,6 +63,9 @@
 
 
 }
+.carousel-inner div{
+  font-family: 'Gamja Flower'; 
+}
 
 .member:hover {
   animation: slide-up-fade-in 0.3s ease-out forwards;
