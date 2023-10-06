@@ -1,10 +1,3 @@
-import {
-  uiElementSelector,
-  memberCardUIElementSelector,
-  teamInfoUIElementSelector,
-  otherUIElements,
-} from "./ui-elements.js";
-
 // 매게변수로 들어온 요소들을 숨기는 함수
 export function hideElements(elements) {
   Object.values(elements).forEach(($el) => {
