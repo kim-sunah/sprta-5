@@ -73,15 +73,27 @@
     text-align: center;
   }
 #team-button-box{
-    z-index: 10;
+    
      margin: 4%;
 }
 
 #member-button-box{
-    z-index: 10;
+   
      margin: 4%;
+     
+    
 
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    #member-button-box{
+   
+        margin-top:20%;
+   }
+   #team-button-box{
+   
+    margin-top:10%;
+}
+  }
 a .alert{
      margin-top: 5%;
      font-family: 'Gamja Flower'; 
