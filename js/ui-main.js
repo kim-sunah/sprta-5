@@ -7,7 +7,6 @@ import {
   handleTeamButtonClick,
   handleMemberButtonClick,
   handleMembersClick,
-  handlebackButtonElementClick,
   handleResetClick,
 } from "./ui-event-handlers.js";
 
