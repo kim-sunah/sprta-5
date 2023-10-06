@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511a4126-30d7-4af0-b129-1b7aeb1cf7e2" name="변경" comment="지원님 병합">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="511a4126-30d7-4af0-b129-1b7aeb1cf7e2" name="변경" comment="지원님 병합" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,16 +22,20 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="태영" />
-                    <option name="lastUsedInstant" value="1696520281" />
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1696557159" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="선아" />
-                    <option name="lastUsedInstant" value="1696393024" />
+                    <option name="lastUsedInstant" value="1696556258" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1696391792" />
+                    <option name="branchName" value="윤찬님" />
+                    <option name="lastUsedInstant" value="1696550854" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="태영" />
+                    <option name="lastUsedInstant" value="1696520281" />
                   </RecentBranch>
                 </list>
               </option>
@@ -58,19 +60,19 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="sprta-5" />
