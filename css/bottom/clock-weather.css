@@ -3,10 +3,6 @@
   justify-content: space-between;
 }
 
-.bottom-box {
-  font-family: 'Nunito';
-}
-
 .clock {
   width: 33vmax;
   height: 16vmin;

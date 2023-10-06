@@ -1,54 +1,78 @@
-.crawling_div div{
+.crawling_div div {
     font-size: medium;
     overflow: hidden;
     max-height: 5rem;
-    font-family: 'Gamja Flower'; 
+    font-family: 'Gamja Flower';
 }
 
-#money{
-    font-family: 'Gamja Flower'; 
+#money {
+    font-family: 'Gamja Flower';
     font-size: 80%;
 }
-.carousel-item li{
+
+.carousel-item li {
     list-style: none;
 }
+
 .github {
     height: 3rem;
-    position:absolute;
+    position: absolute;
     right: 55%;
-    object-fit:cover;
+    object-fit: cover;
 }
+
 .tistory {
     height: 3rem;
-    position:absolute;
+    position: absolute;
     left: 55%;
-    object-fit:cover;
+    object-fit: cover;
 }
+
+@media screen and (min-width: 750px) and (max-width: 1024px) {
+    .tistory {
+        height: 2rem;
+    }
+
+    .github {
+        height: 2rem;
+    }
+}
+
 #grid_social_btn {
-margin-top: 2rem;
+    margin-top: 2rem;
 }
 
-.crawling_div{
-   overflow: hidden;
+.crawling_div {
+    overflow: hidden;
 
 }
-.crawling_div .container1{
-    margin-top: 5%;  font-size: 0.8vmax;
+
+.crawling_div .container1 {
+    margin-top: 5%;
+    font-size: 0.8vmax;
 
 }
-.crawling_div .container2{
-    margin-top: 5%;  font-size: 0.8vmax;
+
+.crawling_div .container2 {
+    margin-top: 5%;
+    font-size: 0.8vmax;
 
 }
-.crawling_div .container3{
-    margin-top: 5%;  font-size: 0.8vmax;
+
+.crawling_div .container3 {
+    margin-top: 5%;
+    font-size: 0.8vmax;
 
 }
-.crawling_div .container4{
-    margin-top: 5%;  font-size: 0.8vmax;
+
+.crawling_div .container4 {
+    margin-top: 5%;
+    font-size: 0.8vmax;
 
 }
-.crawling_div .container5{
-    margin-top: 5%;  font-size: 0.8vmax;
+
+.crawling_div .container5 {
+    margin-top: 5%;
+    font-size: 0.8vmax;
 
 }

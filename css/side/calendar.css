@@ -23,6 +23,7 @@
   border-radius: 50%;
   transition: all 0.2s ease-in-out;
 }
+
 .calendar-yearmonth__btn:hover {
   box-shadow: var(--btn-shadow);
   cursor: pointer;
@@ -45,6 +46,8 @@
   border-radius: 10px;
   font-weight: 700;
 }
+
+
 
 .calendar-days div:nth-child(1) {
   color: rgb(248, 95, 95);
@@ -85,4 +88,27 @@
 
 .calendar-date__event {
   border: 1px solid red;
+}
+@media screen and (min-width: 750px) and (max-width: 1024px) {
+  .calendar-day {
+    padding: 0;
+    border-radius: 6px;
+  }
+  .calendar-date{
+    padding:5px 5px;
+  }
+  .calendar-days{
+    padding:0 5px
+  }
+}
+@media screen and (min-width: 750px) and (max-width: 1024px) {
+  .calendar-yearmonth__btn {
+    padding: 10px;
+  }
+  .calendar-yearmonth{
+    padding: 14px 10px 10px 10px;
+  }
+  .calendar-yearmonth{
+    text-align: center;
+  }
 }
