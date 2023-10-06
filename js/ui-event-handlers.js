@@ -21,6 +21,9 @@ const $elements = getElements(uiElementSelector);
 const $memberCardElements = getElements(memberCardUIElementSelector);
 const $teamInfoElements = getElements(teamInfoUIElementSelector);
 
+// 상태 추적용
+let isMemberCardClicked = false;
+
 // 첫 화면을 보여주는 함수
 function showWelcomeScreen() {
   $elements.welcomeScreen.show();
@@ -77,20 +80,8 @@ function handleMembersClick(e) {
     fetchData(memberId, i);
   });
   blogData(memberId);
-}
 
-// 뒤로가기 버튼 클릭 시
-function handlebackButtonElementClick(e) {
-  e.preventDefault();
-
-  otherUIElements.forEach((value) => $(value).hide());
-  $elements.membersInfoContainer.hide();
-  $elements.backButtonElement.hide();
-  $elements.crawlingDivs.hide();
-
-  $elements.cardArea.show();
-  showElements($memberCardElements);
-  $(".calendar").show();
+  isMemberCardClicked = true;
 }
 
 // 리셋 버튼 클릭 시
@@ -105,6 +96,26 @@ function handleResetClick(e) {
   $elements.cardArea.show();
   $elements.teamNameLabel.show();
   $("#today-area").show();
+  $(".calendar").show();
+
+  if (isMemberCardClicked) {
+    handleMemberButtonClick(e);
+    isMemberCardClicked = false;
+    return;
+  }
+}
+
+// 뒤로가기 버튼 클릭 시
+function handlebackButtonElementClick(e) {
+  e.preventDefault();
+
+  otherUIElements.forEach((value) => $(value).hide());
+  $elements.membersInfoContainer.hide();
+  $elements.backButtonElement.hide();
+  $elements.crawlingDivs.hide();
+
+  $elements.cardArea.show();
+  showElements($memberCardElements);
   $(".calendar").show();
 }
 
