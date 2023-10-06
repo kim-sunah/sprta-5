@@ -17,12 +17,14 @@
     position:absolute;
     right: 55%;
     object-fit:cover;
+    cursor: pointer;
 }
 .tistory {
     height: 3rem;
     position:absolute;
     left: 55%;
     object-fit:cover;
+    cursor: pointer;
 }
 #grid_social_btn {
 margin-top: 2rem;

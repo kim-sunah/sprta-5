@@ -9,7 +9,6 @@
  .container5 {
    background-color: rgba(255, 200, 200, 0.6);
    border-radius: 70px;
-   box-shadow: var(--btn-shadow);
    width: 100%;
    font-family: 'Skranji', cursive;
    font-family: 'Sunflower', sans-serif;
@@ -19,7 +18,6 @@
    font-size: 1.8vmax;
    border-radius: 11px;
    cursor: pointer;
-   transition: box-shadow 0.2s ease-in-out;
    word-break: break-all;
    padding: 10px;
    margin-top: 8px;
