@@ -150,8 +150,9 @@ border-color: black;
   }
   #postingbtn {
     width: 15%;
+    
   }
   #commentEdit{
-    width: 50%;
+    width: 60%;
   }
 }
