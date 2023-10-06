@@ -6,10 +6,21 @@
     font-family: 'Gamja Flower'; 
     font-size: 80%;
 }
-
-.weather-info__main-weather{
-    margin-bottom: 30%;
-}
 .carousel-item li{
     list-style: none;
+}
+.github {
+    height: 3rem;
+    position:absolute;
+    right: 55%;
+    object-fit:cover;
+}
+.tistory {
+    height: 3rem;
+    position:absolute;
+    left: 55%;
+    object-fit:cover;
+}
+#grid_social_btn {
+margin-top: 2rem;
 }

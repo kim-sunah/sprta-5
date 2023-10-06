@@ -2,6 +2,9 @@
   display: flex;
   justify-content: space-between;
 }
+.bottom-box{
+  font-family: 'Nunito'; 
+}
 
 .clock {
   width: 33vmax;
@@ -17,7 +20,7 @@
   align-items: center;
   width: 11vmax;
   height: 16vmin;
-  background-color: rgb(30, 30, 30);
+  background-color: #8565048e;
   border-radius: 15px;
   margin: 0.75%
 }
@@ -28,9 +31,7 @@
   height: 14.5vmin;
   justify-content: center;
   align-items: center;
-  background-color: rgb(15, 15, 15);
   border-radius: 10px;
-  box-shadow: 2px -3px 4px rgba(0, 0, 0, 0.8);
 }
 
 .clock-inner span {
@@ -42,7 +43,7 @@
 .weather {
   width: 17vmax;
   height: 16vmin;
-  background-color: rgb(30, 30, 30);
+  background-color: #8565048e;
   border-radius: 20px;
   padding: 1vmin 1.3vmax;
   box-sizing: border-box;

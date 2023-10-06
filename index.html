@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Todo-Todo</title>
+  <title>이게 왜 되조 팀소개</title>
   <link rel="stylesheet" href="css/style.css" />
   <!--bootstrap-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -37,7 +37,7 @@
       </div>
       <div class="main-box">
         <div class="main-box__todo">
-          <!-- <button class='back'>뒤로가기 임시</button> -->
+          <button class='back'>뒤로가기 임시</button>
           <img src="img/Introduction/내일배움캠프.PNG" id='welcome'></h1>
           <div class="main-box__todolist" id="member-area">
             <!--Team 소개-->
@@ -188,8 +188,8 @@
                     <img class="card-img-top" src="img/Introduction/지원.png" style="border-radius: 0;"
                       alt="Card image cap">
                     <div class="card-body">
-                      <h5 class="card-title">yeom Ji won</h5>
-
+                      <h5 class="card-title">
+                        yeom Ji won</h5>
                     </div>
                   </div>
                 </a>
@@ -208,17 +208,18 @@
               <!-- 멤버 카드 5개 -->
             </div>
             <div class="members-info-box" id='member1-info'>
+              <!-- <img src="img/Introduction/solo/kim.png" style="width: 135%; height: 100%; margin: 0px; border-radius: 2rem;"> -->
+              <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel"
+                style="padding: 0.5rem 2rem;">
+                <header
+                  style="width: 100%; text-align: right; display: flex; justify-content: flex-start; padding-left: 3rem;">
 
+                  <h1 style="display: inline;">김선아</h1>
+                  <h5 style="margin-top: 2.5%;">9기 Node.js</h5>
 
-              <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel" style="display: flex;">
-                
-                <div style="text-align: center; height: 100%; justify-content: center; align-items: center;">
-                  <img src="img/Introduction/선아.jpg" style="margin-top: 30%; max-width: 100%; height: auto; border-radius: 50%;">
-                  <h3>김선아 <br>3기 Node.js</h3>
-                </div>
-
+                </header>
                 <div class="carousel-inner">
-                  <div class="carousel-item active" >
+                  <div class="carousel-item active">
                     <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active">1. [팀]과 [자신]에 대한 설명 및
                       MBTI </li>
                     <br>
@@ -236,19 +237,22 @@
                     </p>
                     <p>
                       코드를 짜면서 설명하는건 못해서 대신 짜주고 설명하는편입니다</p>
+                  </div>
+                  <div class="carousel-item">
+                    <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active">3. 장점</li>
                     <br>
-
-                    <li> 3. 장점 </li>
                     <p>연락이 잘되요(거의 하루종일 깨있어요 언제든 텔미)
                       성실한편...?</p>
                   </div>
-                
 
                 </div>
-              
+                <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only"></span>
+                </a>
                 <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  
+                  <span class="sr-only">Next</span>
                 </a>
               </div>
             </div>
@@ -305,7 +309,7 @@
                     <a> 끈기가 있는 편입니다.</a>
                   </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev" >
+                <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="sr-only"></span>
                 </a>
@@ -341,7 +345,7 @@
                       일시킴)</a>
                     <br>
                     <a>
-                      취미로는 헬스장 ,컴퓨터 게임, 개발, 애니(제일 좋아함) 이 있습니다. 그리고 T라서 그런지 공감 못하고 현실팩트 박는 성향이 있습니다. 저도 현실적으로 충고 or 지적
+                      취미로는 헬스장 ,컴퓨터 게임, 개발, 애니(제일 좋아함) 이 있습니다. 그리고 T라서 그런지 공감 못하고 현실팩트 받는 성향이 있습니다. 저도 현실적으로 충고 or 지적
                       해주는거 좋아합니다.</a>
                   </div>
                   <div class="carousel-item">
@@ -530,7 +534,7 @@
         <div class="bottom-box" id="today-area">
           <form>
             <input id="comment" type="text" placeholder="따뜻한 응원 한마디 부탁드려요~"></input>
-            <button id="postingbtn" type="button" class="btn btn-danger">보내기</button>
+            <button id="postingbtn" type="button" class="btn btn-light">보내기</button>
           </form>
           <div id="comment-list"></div>
         </div>
@@ -584,22 +588,9 @@
           <div class="container5">
             test3
           </div>
-
-        </div>
-
-
-        <div id="grid_social_btn">
-          <div class="social_btn">
-            <a href="#" class="fa fa-facebook"> </a>
-          </div>
-          <div class="social_btn">
-            <a href="#" class="fa fa-instagram"> </a>
-          </div>
-          <div class="social_btn">
-            <a href="#" class="fa fa-twitter"> </a>
+          <div id="grid_social_btn">
           </div>
         </div>
-
         <form class="day-submit display-none">
           <div class="day-submit__info">
             <input id="day-name" type="text" placeholder="What day is it?" />
@@ -636,14 +627,16 @@
     crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/7e7b57fe59.js" crossorigin="anonymous"></script>
-  <script src="js/crawling.js"></script>
   <script src="js/crawling2.js"></script>
   <script src="js/background.js"></script>
   <script src="js/calendar.js"></script>
   <script src="js/clock-weather.js"></script>
   <script src="js/quotes.js"></script>
   <script src="js/commentList.js" type="module"></script>
-  <script src='js/ui-controller.js'></script>
+  <script src='js/ui-elements.js' type='module'></script>
+  <script src='js/ui-manipulation.js' type='module'></script>
+  <script src='js/ui-event-handlers.js' type='module'></script>
+  <script src='js/ui-main.js' type='module'></script>
 </body>
 
 </html>
