@@ -18,7 +18,9 @@
 @import 'layout.css';
 
 /* main-box */
+@import './main/todo-list.css';
 @import './main/user-name.css';
+@import './main/todo-submit.css';
 @import "./main/membercard.css";
 @import "./main/Introduction.css";
 
@@ -26,7 +28,6 @@
 /* side-box */
 @import './side/calendar.css';
 @import './side/d-day.css';
-@import "./side/blog.css";
 
 /* bottom-box */
 @import './bottom/clock-weather.css';
