@@ -40,7 +40,7 @@ var seconds = ('0' + today.getSeconds()).slice(-2);
 var dateString = year + '-' + month + '-' + day + " " + hours + ':' + minutes + ':' + seconds;;
 //리스트 출력
 
-$container.postingbtn.on("click", await addComment);
+$container.postingbtn.on("click", addComment);
 $container.commentBox.on("submit", (event) => {
     event.preventDefault();
 })
@@ -68,8 +68,8 @@ async function getCommentList() {
             <button id="editBtn">수정</button>`);
         }
     })
-    $("#deleteBtn").on('click', await deleteComment);
-    $("#editBtn").on('click', await editComment);
+    $("#deleteBtn").on('click', deleteComment);
+    $("#editBtn").on('click', editComment);
 }
 
 async function addComment() {
@@ -94,8 +94,6 @@ async function addComment() {
         getCommentList()
     }
 }
-
-
 
 async function editComment(event) {
     let confirmPw = prompt("게시글의 수정을 위해 비밀번호를 입력해주세요");
