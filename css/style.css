@@ -18,9 +18,7 @@
 @import 'layout.css';
 
 /* main-box */
-@import './main/todo-list.css';
 @import './main/user-name.css';
-@import './main/todo-submit.css';
 @import "./main/membercard.css";
 @import "./main/Introduction.css";
 
