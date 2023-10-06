@@ -57,11 +57,26 @@
      justify-content: flex-start;
 
 }
+.carousel{
+    position: absolute;
+    bottom: 3%;
+}
 .carousel-item_h1{
     width: 100%; 
     font-family: 'Gamja Flower';  
     font-size: 3.3vmax;
+    position: relative;
+    bottom: 10%;  
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .carousel-item{
+      
+      margin-top: 15%;
+  
+    }
+   
+  }
 
 .card-container{
     width: 100%; 
