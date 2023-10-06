@@ -81,3 +81,6 @@ button:hover{
 .carousel {
   height: 100%;
 }
+.carousel-item_div div{
+  width: 80%;
+}

@@ -2,8 +2,9 @@
   display: flex;
   justify-content: space-between;
 }
-.bottom-box{
-  font-family: 'Nunito'; 
+
+.bottom-box {
+  font-family: 'Nunito';
 }
 
 .clock {
@@ -88,10 +89,16 @@
   font-size: 1.6vmax;
   margin-bottom: 0.5vmax;
 }
+
 .weather-info__city-info__temp {
   font-size: 1.3vmax;
 }
-
+.commentBtn{
+  float: right; 
+  margin-right: 1vw; 
+  border: medium;
+  text-decoration: underline;
+}
 .weather-info__main-weather {
   display: flex;
   justify-content: center;
@@ -101,4 +108,13 @@
 .weather-info__main-weather img {
   height: 4vmax;
   width: 4vmax;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .clock-hours,
+  .clock-minutes,
+  .clock-seconds {
+    width: 9vmax;
+  }
 }

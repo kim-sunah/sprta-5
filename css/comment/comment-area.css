@@ -3,6 +3,9 @@
   width: 80%;
   height: 4vh;
   font-family: 'Gamja Flower';
+background-color: transparent;
+border-width: 0 0 1px;
+border-color: black;
 }
 
 #postingbtn {
@@ -11,6 +14,13 @@
   margin: 1vh;
   width: 10%;
   height: 4vh;
+}
+
+#commentEdit{
+  width: 80%;
+background-color: transparent;
+border-width: 0 0 1px;
+border-color: black;
 }
 
 #comment-list li {
@@ -132,4 +142,16 @@
   float: right;
   margin-right: 1vw;
   border: medium;
+}
+@media screen and (min-width: 750px) and (max-width: 1024px) {
+
+  #comment{
+    width: 70%;
+  }
+  #postingbtn {
+    width: 15%;
+  }
+  #commentEdit{
+    width: 60%;
+  }
 }

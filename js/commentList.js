@@ -106,9 +106,9 @@ async function editComment(event) {
 
         li.innerHTML = ` 
         <form>
-            <input id="commentEdit" type="text" placeholder="따뜻한 응원 한마디 부탁드려요~"value = "${change.find(`a:eq(1)`).text()}" style = "width:80%;"></input>
-            <button id="cancelButton" type="button" style="float: right; margin-right: 1vw; border: medium;">취소</button>
-            <button id="editButton" type="button" style="float: right; margin-right: 1vw; border: medium;">수정</button>
+            <input id="commentEdit" type="text" placeholder="따뜻한 응원 한마디 부탁드려요~"value = "${change.find(`a:eq(1)`).text()}"></input>
+            <button id="cancelButton" class = "commentBtn" type="button" >취소</button>
+            <button id="editButton" class = "commentBtn"  type="button">수정</button>
         </form>`
         $("#editButton").on("click",
             async function editCommentbtn(event) {
