@@ -105,7 +105,7 @@ function handleResetClick(e) {
   }
 }
 
-// 뒤로가기 버튼 클릭 시
+// 뒤로가기 상태일 시
 function handlebackButtonElementClick(e) {
   e.preventDefault();
 

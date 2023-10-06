@@ -41,9 +41,6 @@ $(document).ready(function () {
     $elements.memberElements.on("click", function (e) {
       handleMembersClick.call(this, e);
     });
-    $elements.backButtonElement.on("click", (e) =>
-      handlebackButtonElementClick(e)
-    );
     $(".reset").on("click", (e) => handleResetClick(e));
   }
 });
