@@ -74,7 +74,6 @@ function handleMembersClick(e) {
 
   $(`#${memberId}-info`).show();
   $elements.crawlingDivs.show();
-  $elements.backButtonElement.show();
 
   [1, 2, 3, 4, 5].forEach((i) => {
     fetchData(memberId, i);
@@ -111,7 +110,6 @@ function handlebackButtonElementClick(e) {
 
   otherUIElements.forEach((value) => $(value).hide());
   $elements.membersInfoContainer.hide();
-  $elements.backButtonElement.hide();
   $elements.crawlingDivs.hide();
 
   $elements.cardArea.show();
