@@ -10,7 +10,6 @@ export const uiElementSelector = {
   introductionTexts: ".Introduction",
   crawlingDivs: ".crawling_div",
   teamNameLabel: ".team-name",
-  backButtonElement: ".back",
 };
 
 export const memberCardUIElementSelector = {
