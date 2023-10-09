@@ -34,7 +34,7 @@ function showWelcomeScreen() {
     $elements.todoList.show();
     $elements.cardArea.show();
     $elements.teamNameLabel.show();
-  }, 2000);
+  }, 5000);
 }
 
 // team info 버튼 클릭 시
