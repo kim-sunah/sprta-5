@@ -18,14 +18,16 @@
     height: 3rem;
     position: absolute;
     right: 55%;
-    object-fit: cover;
+    object-fit:cover;
+    cursor: pointer;
 }
 
 .tistory {
     height: 3rem;
     position: absolute;
     left: 55%;
-    object-fit: cover;
+    object-fit:cover;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 750px) and (max-width: 1024px) {
