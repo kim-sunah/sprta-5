@@ -6,17 +6,17 @@ response = requests.get("https://sunalog.tistory.com")
 html = response.text
 soup = BeautifulSoup(html, "html.parser")
 
-titles = soup.select('.title')
+titles = soup.select('h2 a')
 blog_title = []
 for title in titles:
   blog_title.append(title.text.strip())
 
-dates = soup.select('.date')
+dates = soup.select('li .date')
 blog_date = []
 for date in dates:
   blog_date.append(date.text)
 
-articles = soup.select('.article-content .link-article')
+articles = soup.select('li a')
 blog_article = []
 for article in articles:
   blog_article.append("https://sunalog.tistory.com" + article['href'])
