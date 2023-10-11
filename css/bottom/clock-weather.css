@@ -65,7 +65,6 @@
 }
 
 .weather-info {
-  margin-top: 1vmin;
   display: flex;
   height: 9vmin;
   justify-content: space-between;
