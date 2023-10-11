@@ -14,6 +14,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
     <option name="recentBranches">
       <RecentBranches>
         <option name="branchesForRepo">
@@ -99,6 +100,7 @@
       <workItem from="1696127089311" duration="841000" />
       <workItem from="1696365462490" duration="2125000" />
       <workItem from="1696505871077" duration="686000" />
+      <workItem from="1696933152755" duration="647000" />
     </task>
     <task id="LOCAL-00001" summary="지원님 병합">
       <option name="closed" value="true" />
@@ -108,7 +110,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696505959784</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="지원님 병합">
+      <option name="closed" value="true" />
+      <created>1696933201430</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696933201430</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

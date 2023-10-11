@@ -8,13 +8,13 @@ import { query, orderBy, where } from "https://www.gstatic.com/firebasejs/9.22.0
 // Firebase 구성 정보 설정
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyDtDmm6iJf4PIZtpJXfRRd8W-XKjuHxhgA",
-    authDomain: "sparta-1e178.firebaseapp.com",
-    projectId: "sparta-1e178",
-    storageBucket: "sparta-1e178.appspot.com",
-    messagingSenderId: "916403747858",
-    appId: "1:916403747858:web:0b8f305adc6a5709612ccb",
-    measurementId: "G-L8YQRNY77F"
+    apiKey: "AIzaSyCauRZ02WOgnWSXDX7pEVv9xJ-g25bOyWE",
+    authDomain: "sparta5-65934.firebaseapp.com",
+    databaseURL: "https://sparta5-65934-default-rtdb.firebaseio.com",
+    projectId: "sparta5-65934",
+    storageBucket: "sparta5-65934.appspot.com",
+    messagingSenderId: "381298859705",
+    appId: "1:381298859705:web:b65a54d74b3b7f765b8568",
 };
 
 // Firebase 인스턴스 초기화

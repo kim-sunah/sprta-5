@@ -29,6 +29,7 @@
 @import './side/calendar.css';
 @import './side/d-day.css';
 @import "./side/blog.css";
+@import "./side/modal.css";
 
 /* bottom-box */
 @import './bottom/clock-weather.css';
