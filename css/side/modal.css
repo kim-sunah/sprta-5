@@ -1,27 +1,41 @@
 #modalWrap {
-  /* 모달 스타일을 정의하고 중앙에 위치하도록 설정 */
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  z-index: 9999;
-  width: 90%;
-height: 50%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
 }
 
 #modalContent {
-  /* 모달 내용 스타일을 정의 */
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  height: 30%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 
+#modalData ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
 #closeBtn {
-  /* 닫기 버튼 스타일을 정의하고 오른쪽 상단에 위치하도록 설정 */
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 1rem;
+  right: 1rem;
   cursor: pointer;
-  font-size: 20px;
-  color: #888;
+  font-size: 2rem; 
+  line-height: 30px; 
 }
